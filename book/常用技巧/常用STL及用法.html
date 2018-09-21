@@ -1,0 +1,2025 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>常用STL及用法 · riba2534-ACM-Template</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pb_ds库用法.html" />
+    
+    
+    <link rel="prev" href="输入输出加速.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">常用技巧</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="输入输出加速.html">
+            
+                <a href="输入输出加速.html">
+            
+                    
+                    输入输出加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="常用STL及用法.html">
+            
+                <a href="常用STL及用法.html">
+            
+                    
+                    常用STL及用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="pb_ds库用法.html">
+            
+                <a href="pb_ds库用法.html">
+            
+                    
+                    pb_ds库用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="库函数.html">
+            
+                <a href="库函数.html">
+            
+                    
+                    库函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="小技巧.html">
+            
+                <a href="小技巧.html">
+            
+                    
+                    小技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="位运算.html">
+            
+                <a href="位运算.html">
+            
+                    
+                    位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数论</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数论/欧拉函数.html">
+            
+                <a href="../数论/欧拉函数.html">
+            
+                    
+                    欧拉函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../数论/快速幂.html">
+            
+                <a href="../数论/快速幂.html">
+            
+                    
+                    快速幂/矩阵快速幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../数论/康托展开.html">
+            
+                <a href="../数论/康托展开.html">
+            
+                    
+                    康托展开
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../数论/欧几里得算法.html">
+            
+                <a href="../数论/欧几里得算法.html">
+            
+                    
+                    欧几里得/扩展欧几里得算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../数论/求逆元.html">
+            
+                <a href="../数论/求逆元.html">
+            
+                    
+                    求逆元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../数论/自适应辛普森积分.html">
+            
+                <a href="../数论/自适应辛普森积分.html">
+            
+                    
+                    自适应辛普森积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../数论/素数.html">
+            
+                <a href="../数论/素数.html">
+            
+                    
+                    素数相关/线性筛法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../数论/博弈论.html">
+            
+                <a href="../数论/博弈论.html">
+            
+                    
+                    博弈论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" data-path="../数论/博弈论/巴什博奕.html">
+            
+                <a href="../数论/博弈论/巴什博奕.html">
+            
+                    
+                    巴什博奕
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="../数论/博弈论/威佐夫博弈.html">
+            
+                <a href="../数论/博弈论/威佐夫博弈.html">
+            
+                    
+                    威佐夫博弈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.3" data-path="../数论/博弈论/尼姆博弈.html">
+            
+                <a href="../数论/博弈论/尼姆博弈.html">
+            
+                    
+                    尼姆博弈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.4" data-path="../数论/博弈论/SG函数.html">
+            
+                <a href="../数论/博弈论/SG函数.html">
+            
+                    
+                    SG函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">高精度运算</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../高精度运算/大数的加减乘除.html">
+            
+                <a href="../高精度运算/大数的加减乘除.html">
+            
+                    
+                    大数的加减乘除
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">组合数学</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../组合数学/母函数.html">
+            
+                <a href="../组合数学/母函数.html">
+            
+                    
+                    母函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../组合数学/BM线性递推.html">
+            
+                <a href="../组合数学/BM线性递推.html">
+            
+                    
+                    BM线性递推
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../组合数学/容斥原理.html">
+            
+                <a href="../组合数学/容斥原理.html">
+            
+                    
+                    容斥原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../组合数学/组合数.html">
+            
+                <a href="../组合数学/组合数.html">
+            
+                    
+                    组合数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../组合数学/卢卡斯定理.html">
+            
+                <a href="../组合数学/卢卡斯定理.html">
+            
+                    
+                    卢卡斯定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">图论</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../图论/欧拉回路.html">
+            
+                <a href="../图论/欧拉回路.html">
+            
+                    
+                    欧拉回路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../图论/Havel-Hakimi定理.html">
+            
+                <a href="../图论/Havel-Hakimi定理.html">
+            
+                    
+                    Havel-Hakimi定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../图论/最小生成树.html">
+            
+                <a href="../图论/最小生成树.html">
+            
+                    
+                    最小生成树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../图论/最小生成树/Kruakal算法.html">
+            
+                <a href="../图论/最小生成树/Kruakal算法.html">
+            
+                    
+                    Kruakal算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../图论/最小生成树/prime算法.html">
+            
+                <a href="../图论/最小生成树/prime算法.html">
+            
+                    
+                    prime算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../图论/最短路.html">
+            
+                <a href="../图论/最短路.html">
+            
+                    
+                    最短路
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../图论/最短路/Dijkstra算法.html">
+            
+                <a href="../图论/最短路/Dijkstra算法.html">
+            
+                    
+                    Dijkstra算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.2" data-path="../图论/最短路/floyd算法.html">
+            
+                <a href="../图论/最短路/floyd算法.html">
+            
+                    
+                    floyd算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.3" data-path="../图论/最短路/Bell-Ford算法.html">
+            
+                <a href="../图论/最短路/Bell-Ford算法.html">
+            
+                    
+                    Bell-Ford算法以及队列优化SPFA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.4" data-path="../图论/最短路/第k短路.html">
+            
+                <a href="../图论/最短路/第k短路.html">
+            
+                    
+                    第k短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../图论/二分图匹配.html">
+            
+                <a href="../图论/二分图匹配.html">
+            
+                    
+                    二分图匹配
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.5.1" data-path="../图论/二分图匹配/匈牙利算法.html">
+            
+                <a href="../图论/二分图匹配/匈牙利算法.html">
+            
+                    
+                    匈牙利算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.2" data-path="../图论/二分图匹配/二分图染色法.html">
+            
+                <a href="../图论/二分图匹配/二分图染色法.html">
+            
+                    
+                    二分图染色法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.3" data-path="../图论/二分图匹配/最大完备匹配-KM算法.html">
+            
+                <a href="../图论/二分图匹配/最大完备匹配-KM算法.html">
+            
+                    
+                    最大完备匹配-KM算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.4" data-path="../图论/二分图匹配/多重匹配.html">
+            
+                <a href="../图论/二分图匹配/多重匹配.html">
+            
+                    
+                    多重匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.5" data-path="../图论/二分图匹配/最小路径覆盖.html">
+            
+                <a href="../图论/二分图匹配/最小路径覆盖.html">
+            
+                    
+                    最小路径覆盖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.6" data-path="../图论/二分图匹配/最小点集覆盖-König定理.html">
+            
+                <a href="../图论/二分图匹配/最小点集覆盖-König定理.html">
+            
+                    
+                    最小点集覆盖-König定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../图论/网络流.html">
+            
+                <a href="../图论/网络流.html">
+            
+                    
+                    网络流
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.6.1" data-path="../图论/网络流/最大流-EK算法.html">
+            
+                <a href="../图论/网络流/最大流-EK算法.html">
+            
+                    
+                    最大流-EK算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6.2" data-path="../图论/网络流/最大流-ISAP算法.html">
+            
+                <a href="../图论/网络流/最大流-ISAP算法.html">
+            
+                    
+                    最大流-ISAP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6.3" data-path="../图论/网络流/最大流-Dinic算法.html">
+            
+                <a href="../图论/网络流/最大流-Dinic算法.html">
+            
+                    
+                    最大流-Dinic算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6.4" data-path="../图论/网络流/最小费用最大流.html">
+            
+                <a href="../图论/网络流/最小费用最大流.html">
+            
+                    
+                    最小费用最大流-最小费用路算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../图论/图连通.html">
+            
+                <a href="../图论/图连通.html">
+            
+                    
+                    图的连通-tarjan算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../图论/树的直径.html">
+            
+                <a href="../图论/树的直径.html">
+            
+                    
+                    树的直径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="../图论/最近公共祖先.html">
+            
+                <a href="../图论/最近公共祖先.html">
+            
+                    
+                    最近公共祖先LCA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.9.1" data-path="../图论/最近公共祖先/离线Tarjan算法.html">
+            
+                <a href="../图论/最近公共祖先/离线Tarjan算法.html">
+            
+                    
+                    离线Tarjan算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9.2" data-path="../图论/最近公共祖先/在线倍增算法.html">
+            
+                <a href="../图论/最近公共祖先/在线倍增算法.html">
+            
+                    
+                    在线倍增算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9.3" data-path="../图论/最近公共祖先/树剖求lca.html">
+            
+                <a href="../图论/最近公共祖先/树剖求lca.html">
+            
+                    
+                    树剖求lca
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="../图论/拓扑排序.html">
+            
+                <a href="../图论/拓扑排序.html">
+            
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="../图论/搜索.html">
+            
+                <a href="../图论/搜索.html">
+            
+                    
+                    搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.12" data-path="../字符串/KMP算法.html">
+            
+                <a href="../字符串/KMP算法.html">
+            
+                    
+                    KMP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13" data-path="../字符串/扩展KMP算法.html">
+            
+                <a href="../字符串/扩展KMP算法.html">
+            
+                    
+                    扩展KMP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.14" data-path="../字符串/AC自动机算法.html">
+            
+                <a href="../字符串/AC自动机算法.html">
+            
+                    
+                    AC自动机算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.15" data-path="../字符串/字符串最大最小表示法.html">
+            
+                <a href="../字符串/字符串最大最小表示法.html">
+            
+                    
+                    字符串最大最小表示法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.16" data-path="../字符串/Manacher算法.html">
+            
+                <a href="../字符串/Manacher算法.html">
+            
+                    
+                    Manacher算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.17" data-path="../字符串/后缀数组.html">
+            
+                <a href="../字符串/后缀数组.html">
+            
+                    
+                    后缀数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../数据结构/线段树.html">
+            
+                <a href="../数据结构/线段树.html">
+            
+                    
+                    线段树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../数据结构/线段树/单点更新-区间求和.html">
+            
+                <a href="../数据结构/线段树/单点更新-区间求和.html">
+            
+                    
+                    单点更新-区间求和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../数据结构/线段树/单点更新-区间求最值.html">
+            
+                <a href="../数据结构/线段树/单点更新-区间求最值.html">
+            
+                    
+                    单点更新-区间求最值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../数据结构/线段树/区间更新.html">
+            
+                <a href="../数据结构/线段树/区间更新.html">
+            
+                    
+                    区间更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../数据结构/线段树/线段树+离散化.html">
+            
+                <a href="../数据结构/线段树/线段树+离散化.html">
+            
+                    
+                    线段树+离散化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="../数据结构/线段树/扫描线-离散化-矩形面积并.html">
+            
+                <a href="../数据结构/线段树/扫描线-离散化-矩形面积并.html">
+            
+                    
+                    扫描线-离散化-矩形面积并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6" data-path="../数据结构/线段树/扫描线-离散化-矩形面积交.html">
+            
+                <a href="../数据结构/线段树/扫描线-离散化-矩形面积交.html">
+            
+                    
+                    扫描线-离散化-矩形面积交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7" data-path="../数据结构/线段树/值域线段树.html">
+            
+                <a href="../数据结构/线段树/值域线段树.html">
+            
+                    
+                    值域线段树求第k大
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../数据结构/RMQ算法.html">
+            
+                <a href="../数据结构/RMQ算法.html">
+            
+                    
+                    RMQ算法/ST表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../数据结构/树状数组.html">
+            
+                <a href="../数据结构/树状数组.html">
+            
+                    
+                    树状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../数据结构/树链剖分.html">
+            
+                <a href="../数据结构/树链剖分.html">
+            
+                    
+                    树链剖分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../数据结构/主席树.html">
+            
+                <a href="../数据结构/主席树.html">
+            
+                    
+                    主席树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../数据结构/莫队算法.html">
+            
+                <a href="../数据结构/莫队算法.html">
+            
+                    
+                    莫队算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../数据结构/区间不同元素个数.html">
+            
+                <a href="../数据结构/区间不同元素个数.html">
+            
+                    
+                    区间不同元素个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../数据结构/单调栈-单调队列.html">
+            
+                <a href="../数据结构/单调栈-单调队列.html">
+            
+                    
+                    单调栈-单调队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="../数据结构/Trie树.html">
+            
+                <a href="../数据结构/Trie树.html">
+            
+                    
+                    Trie树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="../数据结构/线性基.html">
+            
+                <a href="../数据结构/线性基.html">
+            
+                    
+                    线性基
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="../数据结构/使序列有序的最少交换次数.html">
+            
+                <a href="../数据结构/使序列有序的最少交换次数.html">
+            
+                    
+                    使序列有序的最少交换次数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">动态规划</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../动态规划/区间dp-状压dp.html">
+            
+                <a href="../动态规划/区间dp-状压dp.html">
+            
+                    
+                    区间dp-状压dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../动态规划/最长公共子序列LCS.html">
+            
+                <a href="../动态规划/最长公共子序列LCS.html">
+            
+                    
+                    最长公共子序列LCS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../动态规划/单调递增子序列LIS.html">
+            
+                <a href="../动态规划/单调递增子序列LIS.html">
+            
+                    
+                    单调递增子序列LIS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../动态规划/编辑距离.html">
+            
+                <a href="../动态规划/编辑距离.html">
+            
+                    
+                    编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../动态规划/背包类问题.html">
+            
+                <a href="../动态规划/背包类问题.html">
+            
+                    
+                    背包类问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../动态规划/树形dp.html">
+            
+                <a href="../动态规划/树形dp.html">
+            
+                    
+                    树形dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="../动态规划/数位dp.html">
+            
+                <a href="../动态规划/数位dp.html">
+            
+                    
+                    数位dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="../动态规划/状压dp.html">
+            
+                <a href="../动态规划/状压dp.html">
+            
+                    
+                    状压dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../其他/表达式求值.html">
+            
+                <a href="../其他/表达式求值.html">
+            
+                    
+                    表达式求值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../其他/归并排序.html">
+            
+                <a href="../其他/归并排序.html">
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../其他/计算几何合集.html">
+            
+                <a href="../其他/计算几何合集.html">
+            
+                    
+                    计算几何合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../其他/模拟退火.html">
+            
+                <a href="../其他/模拟退火.html">
+            
+                    
+                    模拟退火
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="../其他/二分查找.html">
+            
+                <a href="../其他/二分查找.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="../其他/各种公式.html">
+            
+                <a href="../其他/各种公式.html">
+            
+                    
+                    各种公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="../其他/java和python.html">
+            
+                <a href="../其他/java和python.html">
+            
+                    
+                    java和python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.8" data-path="../其他/vim配置.html">
+            
+                <a href="../其他/vim配置.html">
+            
+                    
+                    vim配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >常用STL及用法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5E38;&#x7528;stl&#x53CA;&#x7528;&#x6CD5;">&#x5E38;&#x7528;STL&#x53CA;&#x7528;&#x6CD5;</h1>
+<p>&#x4EE5;&#x4E0B;&#x6574;&#x7406;&#x4E00;&#x4E0B;&#x5E38;&#x7528;&#x7684;<code>STL</code>&#x7684;&#x5E38;&#x7528;&#x7528;&#x6CD5;.</p>
+<h2 id="&#x54C8;&#x5E0C;&#x5BB9;&#x5668;">&#x54C8;&#x5E0C;&#x5BB9;&#x5668;</h2>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">//&#x5F53;&#x5BB9;&#x5668;&#x4E0D;&#x9700;&#x8981;&#x6392;&#x5E8F;&#x65F6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x54C8;&#x5E0C;&#x5BB9;&#x5668;&#x6765;&#x83B7;&#x53D6;&#x66F4;&#x9AD8;&#x7684;&#x6027;&#x80FD;</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_map&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unordered_set&gt;</span></span>
+unordered_map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span>mp1<span class="token punctuation">;</span>
+unordered_multimap<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span>mp2<span class="token punctuation">;</span>
+unordered_set<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span>s1<span class="token punctuation">;</span>
+unordered_multiset<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span>s2<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="stl&#x4E2D;&#x7684;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7B97;&#x6CD5;">STL&#x4E2D;&#x7684;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7B97;&#x6CD5;</h2>
+<ul>
+<li>binary_search&#xFF1A;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x5426;&#x51FA;&#x73B0;&#x3002;</li>
+<li>lower_bound&#xFF1A;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</li>
+<li>upper_bound&#xFF1A;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</li>
+<li><p>equal_range&#xFF1A;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x51FA;&#x73B0;&#x7684;&#x8D77;&#x6B62;&#x4F4D;&#x7F6E;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x7EC8;&#x6B62;&#x4F4D;&#x7F6E;&#x4E3A;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#x52A0;&#x4E00;&#x3002;</p>
+</li>
+<li><p><code>binary_search</code>&#x8BD5;&#x56FE;&#x5728;&#x5DF2;&#x6392;&#x5E8F;&#x7684;[first, last)&#x4E2D;&#x5BFB;&#x627E;&#x5143;&#x7D20;value&#x3002;&#x5982;&#x679C;[first, last)&#x5185;&#x6709;&#x7B49;&#x4EF7;&#x4E8E;value&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5B83;&#x4F1A;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;false&#xFF0C;&#x5B83;&#x4E0D;&#x8FD4;&#x56DE;&#x67E5;&#x627E;&#x4F4D;&#x7F6E;&#x3002;</p>
+</li>
+<li><p><code>lower_bound</code>&#x5B83;&#x8BD5;&#x56FE;&#x5728;&#x5DF2;&#x6392;&#x5E8F;&#x7684;[first,last)&#x4E2D;&#x5BFB;&#x627E;&#x5143;&#x7D20;value&#x3002;&#x5982;&#x679C;[first, last)&#x5177;&#x6709;&#x7B49;&#x4EF7;&#x4E8E;value&#x7684;&#x5143;&#x7D20;&#xFF0C;lower_bound&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;iterator&#x6307;&#x5411;&#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x5143;&#x7D20;&#x5B58;&#x5728;&#xFF0C;&#x5B83;&#x4FBF;&#x8FD4;&#x56DE;&#x5047;&#x8BBE;&#x8FD9;&#x6837;&#x7684;&#x5143;&#x7D20;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5373;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x5C0F;&#x4E8E;value&#x7684;&#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;value&#x5927;&#x4E8E;[first, last)&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;last&#x3002;</p>
+<blockquote>
+<p>  STL &#x4E2D;&#x7684; lower_bound()&#xFF0C;
+  &#x51FD;&#x6570;lower_bound()&#x5728;first&#x548C;last&#x4E2D;&#x7684;&#x524D;&#x95ED;&#x540E;&#x5F00;&#x533A;&#x95F4;&#x8FDB;&#x884C;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#xFF0C;&#x8FD4;&#x56DE;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;val&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x5C0F;&#x4E8E;val&#xFF0C;&#x5219;&#x8FD4;&#x56DE;last&#x7684;&#x4F4D;&#x7F6E;
+  &#x4E3E;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;
+  &#x4E00;&#x4E2A;&#x6570;&#x7EC4;number&#x5E8F;&#x5217;&#x4E3A;&#xFF1A;4,10,11,30,69,70,96,100.&#x8BBE;&#x8981;&#x63D2;&#x5165;&#x6570;&#x5B57;3,9,111.pos&#x4E3A;&#x8981;&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#x7684;&#x4E0B;&#x6807;
+  &#x5219;
+  pos = lower_bound( number, number + 8, 3) - number&#xFF0C;pos = 0.&#x5373;number&#x6570;&#x7EC4;&#x7684;&#x4E0B;&#x6807;&#x4E3A;0&#x7684;&#x4F4D;&#x7F6E;&#x3002;
+  pos = lower_bound( number, number + 8, 9) - number&#xFF0C; pos = 1&#xFF0C;&#x5373;number&#x6570;&#x7EC4;&#x7684;&#x4E0B;&#x6807;&#x4E3A;1&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x5373;10&#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#xFF09;&#x3002;
+  pos = lower_bound( number, number + 8, 111) - number&#xFF0C; pos = 8&#xFF0C;&#x5373;number&#x6570;&#x7EC4;&#x7684;&#x4E0B;&#x6807;&#x4E3A;8&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x4F46;&#x4E0B;&#x6807;&#x4E0A;&#x9650;&#x4E3A;7&#xFF0C;&#x6240;&#x4EE5;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#x3002;
+  &#x6240;&#x4EE5;&#xFF0C;&#x8981;&#x8BB0;&#x4F4F;&#xFF1A;&#x51FD;&#x6570;lower_bound()&#x5728;first&#x548C;last&#x4E2D;&#x7684;&#x524D;&#x95ED;&#x540E;&#x5F00;&#x533A;&#x95F4;&#x8FDB;&#x884C;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#xFF0C;&#x8FD4;&#x56DE;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;val&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x5C0F;&#x4E8E;val&#xFF0C;&#x5219;&#x8FD4;&#x56DE;last&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E14;last&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x8D8A;&#x754C;&#x7684;&#xFF01;&#xFF01;~</p>
+</blockquote>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  
+<span class="token punctuation">{</span>  
+    <span class="token keyword">int</span> point<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">}</span><span class="token punctuation">;</span>  
+    <span class="token keyword">int</span> tmp <span class="token operator">=</span> <span class="token function">upper_bound</span><span class="token punctuation">(</span>point<span class="token punctuation">,</span> point <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token operator">-</span> point<span class="token punctuation">;</span><span class="token comment">//&#x6309;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#xFF0C;7&#x6700;&#x591A;&#x80FD;&#x63D2;&#x5165;&#x6570;&#x7EC4;point&#x7684;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;  </span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span>tmp<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    tmp <span class="token operator">=</span> <span class="token function">lower_bound</span><span class="token punctuation">(</span>point<span class="token punctuation">,</span> point <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span> <span class="token operator">-</span> point<span class="token punctuation">;</span><span class="token comment">////&#x6309;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#xFF0C;7&#x6700;&#x5C11;&#x80FD;&#x63D2;&#x5165;&#x6570;&#x7EC4;point&#x7684;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;  </span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span>tmp<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>  
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p><code>upper_bound</code>&#x5B83;&#x8BD5;&#x56FE;&#x5728;&#x5DF2;&#x6392;&#x5E8F;&#x7684;[first,last)&#x4E2D;&#x5BFB;&#x627E;value&#xFF0C;&#x8FD4;&#x56DE;&#x53EF;&#x5B89;&#x63D2;value&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;value&#x5B58;&#x5728;&#xFF0C;lower_bound &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6307;&#x5411;&#x8BE5;&#x5143;&#x7D20;&#x7684;iterator&#x3002;&#x76F8;&#x8F83;&#x4E4B;&#x4E0B;upper_bound&#x5E76;&#x4E0D;&#x8FD9;&#x4E48;&#x505A;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;value&#x53EF;&#x88AB;&#x5B89;&#x63D2;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;value&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x8FD4;&#x56DE;&#x7684;iterator&#x5C06;&#x6307;&#x5411;value&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x800C;&#x975E;value&#x81EA;&#x8EAB;&#x3002;</p>
+</li>
+<li><p><code>equal_range</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x672C;&#x8D28;&#x4E0A;&#x7ED3;&#x5408;&#x4E86;lower_bound&#x548C;upper_bound&#x4E24;&#x8005;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x5BF9;iterator i &#x548C; j &#xFF0C; &#x5176;&#x4E2D;i&#x662F;value&#x53EF;&#x5B89;&#x63D2;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;j&#x5219;&#x662F;value&#x53EF;&#x5B89;&#x63D2;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x3002;&#x53EF;&#x4EE5;&#x63A8;&#x6F14;&#x51FA;&#xFF1A;[i&#xFF0C;j)&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x7B49;&#x4EF7;&#x4E8E;value&#xFF0C;&#x800C;&#x4E14;[i, j)&#x662F;[first, last)&#x4E4B;&#x4E2D;&#x7B26;&#x5408;&#x4E0A;&#x8FF0;&#x6027;&#x8D28;&#x7684;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x5B50;&#x533A;&#x95F4;&#x3002;  &#x7B97;&#x6CD5;lower_bound&#x8FD4;&#x56DE;&#x8BE5;range&#x7684;&#x7B2C;&#x4E00;&#x4E2A;iterator&#xFF0C; &#x7B97;&#x6CD5;upper_bound&#x8FD4;&#x56DE;&#x8BE5;range&#x7684;past-the-end iterator&#xFF0C;&#x7B97;&#x6CD5;equal_range&#x5219;&#x662F;&#x4EE5;pair&#x7684;&#x5F62;&#x5F0F;&#x5C06;&#x4E24;&#x8005;&#x90FD;&#x8FD4;&#x56DE;&#x3002;</p>
+</li>
+</ul>
+<hr>
+<h2 id="unique&#x53BB;&#x91CD;">unique&#x53BB;&#x91CD;</h2>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> m<span class="token operator">=</span><span class="token function">unique</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span>X<span class="token operator">+</span>num<span class="token punctuation">)</span><span class="token operator">-</span>X<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5BF9;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x53BB;&#x91CD;&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x6570;&#x7EC4;&#x5DF2;&#x7ECF;&#x6709;&#x5E8F;&#xFF0C;&#x53BB;&#x91CD;&#x540E;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x6CA1;&#x6709;&#x53BB;&#xFF0C;&#x53EA;&#x662F;&#x628A;&#x91CD;&#x590D;&#x7684;&#x653E;&#x5728;&#x4E86;&#x540E;&#x9762;</p>
+<h2 id="string&#x7C7B;&#x7684;&#x4E00;&#x4E9B;&#x7528;&#x6CD5;">String&#x7C7B;&#x7684;&#x4E00;&#x4E9B;&#x7528;&#x6CD5;</h2>
+<ol>
+<li><p><code>replace</code>&#x7684;&#x7528;&#x6CD5;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">/*&#x7528;&#x6CD5;&#x4E00;&#xFF1A;  
+ *&#x7528;str&#x66FF;&#x6362;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x4ECE;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;pos&#x5F00;&#x59CB;&#x957F;&#x5EA6;&#x4E3A;len&#x7684;&#x5B57;&#x7B26;  
+ *string&amp; replace (size_t pos, size_t len, const string&amp; str);  
+ */</span>    
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    
+<span class="token punctuation">{</span>    
+    string line <span class="token operator">=</span> <span class="token string">&quot;this@ is@ a test string!&quot;</span><span class="token punctuation">;</span>    
+    line <span class="token operator">=</span> line<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>line<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">&quot;@&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;@&#x4F4D;&#x7F6E;&#x66FF;&#x6362;&#x7B2C;&#x4E00;&#x4E2A;@&#x4E3A;&#x7A7A;    </span>
+    cout <span class="token operator">&lt;&lt;</span> line <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>       
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>    
+
+<span class="token comment">/*&#x7528;&#x6CD5;&#x4E8C;&#xFF1A;  
+ *&#x7528;str&#x66FF;&#x6362; &#x8FED;&#x4EE3;&#x5668;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E; &#x548C; &#x7ED3;&#x675F;&#x4F4D;&#x7F6E; &#x7684;&#x5B57;&#x7B26;  
+ *string&amp; replace (const_iterator i1, const_iterator i2, const string&amp; str);  
+ */</span>    
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    
+<span class="token punctuation">{</span>    
+    string line <span class="token operator">=</span> <span class="token string">&quot;this@ is@ a test string!&quot;</span><span class="token punctuation">;</span>    
+    line <span class="token operator">=</span> line<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>line<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> line<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x7528;str&#x66FF;&#x6362;&#x4ECE;begin&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x7684;6&#x4E2A;&#x5B57;&#x7B26;    </span>
+    cout <span class="token operator">&lt;&lt;</span> line <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>       
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>    
+<span class="token punctuation">}</span> 
+<span class="token comment">/*&#x7528;&#x6CD5;&#x4E09;&#xFF1A;  
+ *&#x7528;substr&#x7684;&#x6307;&#x5B9A;&#x5B50;&#x4E32;&#xFF08;&#x7ED9;&#x5B9A;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x548C;&#x957F;&#x5EA6;&#xFF09;&#x66FF;&#x6362;&#x4ECE;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x5B57;&#x7B26;&#x4E32;  
+ *string&amp; replace (size_t pos, size_t len, const string&amp; str, size_t subpos, size_t sublen);  
+ */</span>    
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    
+<span class="token punctuation">{</span>    
+    string line <span class="token operator">=</span> <span class="token string">&quot;this@ is@ a test string!&quot;</span><span class="token punctuation">;</span>    
+    string substr <span class="token operator">=</span> <span class="token string">&quot;12345&quot;</span><span class="token punctuation">;</span>    
+    line <span class="token operator">=</span> line<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> substr<span class="token punctuation">,</span> substr<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x7528;substr&#x7684;&#x6307;&#x5B9A;&#x5B50;&#x4E32;&#xFF08;&#x4ECE;1&#x4F4D;&#x7F6E;&#x6570;&#x5171;3&#x4E2A;&#x5B57;&#x7B26;&#xFF09;&#x66FF;&#x6362;&#x4ECE;0&#x5230;5&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;line    </span>
+    cout <span class="token operator">&lt;&lt;</span> line <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>       
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>&#x5E38;&#x7528;&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code class="lang-cpp">a<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token punctuation">,</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment">//&#x8D4B;&#x4EE5;&#x65B0;&#x503C;  </span>
+b<span class="token punctuation">)</span> <span class="token function">swap</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment">//&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5185;&#x5BB9;  </span>
+c<span class="token punctuation">)</span> <span class="token operator">+</span><span class="token operator">=</span><span class="token punctuation">,</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x5728;&#x5C3E;&#x90E8;&#x6DFB;&#x52A0;&#x5B57;&#x7B26;  </span>
+d<span class="token punctuation">)</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x63D2;&#x5165;&#x5B57;&#x7B26;  </span>
+e<span class="token punctuation">)</span> <span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x5220;&#x9664;&#x5B57;&#x7B26;  </span>
+f<span class="token punctuation">)</span> <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x5220;&#x9664;&#x5168;&#x90E8;&#x5B57;&#x7B26;  </span>
+g<span class="token punctuation">)</span> <span class="token function">replace</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x66FF;&#x6362;&#x5B57;&#x7B26;  </span>
+h<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token comment">//&#x4E32;&#x8054;&#x5B57;&#x7B26;&#x4E32;  </span>
+i<span class="token punctuation">)</span> <span class="token operator">==</span><span class="token punctuation">,</span><span class="token operator">!=</span><span class="token punctuation">,</span><span class="token operator">&lt;</span><span class="token punctuation">,</span><span class="token operator">&lt;=</span><span class="token punctuation">,</span><span class="token operator">&gt;</span><span class="token punctuation">,</span><span class="token operator">&gt;=</span><span class="token punctuation">,</span><span class="token function">compare</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment">//&#x6BD4;&#x8F83;&#x5B57;&#x7B26;&#x4E32;  </span>
+j<span class="token punctuation">)</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment">//&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x6570;&#x91CF;  </span>
+k<span class="token punctuation">)</span> <span class="token function">max_size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x7684;&#x53EF;&#x80FD;&#x6700;&#x5927;&#x4E2A;&#x6570;  </span>
+l<span class="token punctuation">)</span> <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment">//&#x5224;&#x65AD;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4E3A;&#x7A7A;  </span>
+m<span class="token punctuation">)</span> <span class="token function">capacity</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x8FD4;&#x56DE;&#x91CD;&#x65B0;&#x5206;&#x914D;&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x5BB9;&#x91CF;  </span>
+n<span class="token punctuation">)</span> <span class="token function">reserve</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x4FDD;&#x7559;&#x4E00;&#x5B9A;&#x91CF;&#x5185;&#x5B58;&#x4EE5;&#x5BB9;&#x7EB3;&#x4E00;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x5B57;&#x7B26;  </span>
+o<span class="token punctuation">)</span> <span class="token punctuation">[</span> <span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token function">at</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x5B58;&#x53D6;&#x5355;&#x4E00;&#x5B57;&#x7B26;  </span>
+p<span class="token punctuation">)</span> <span class="token operator">&gt;&gt;</span><span class="token punctuation">,</span><span class="token function">getline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x4ECE;stream&#x8BFB;&#x53D6;&#x67D0;&#x503C;  </span>
+q<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span>    <span class="token comment">//&#x5C06;&#x8C0B;&#x503C;&#x5199;&#x5165;stream  </span>
+r<span class="token punctuation">)</span> <span class="token function">copy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x5C06;&#x67D0;&#x503C;&#x8D4B;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;C_string  </span>
+s<span class="token punctuation">)</span> <span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x5C06;&#x5185;&#x5BB9;&#x4EE5;C_string&#x8FD4;&#x56DE;  </span>
+t<span class="token punctuation">)</span> <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x5C06;&#x5185;&#x5BB9;&#x4EE5;&#x5B57;&#x7B26;&#x6570;&#x7EC4;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;  </span>
+u<span class="token punctuation">)</span> <span class="token function">substr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x8FD4;&#x56DE;&#x67D0;&#x4E2A;&#x5B50;&#x5B57;&#x7B26;&#x4E32;  </span>
+v<span class="token punctuation">)</span>&#x67E5;&#x627E;&#x51FD;&#x6570;  
+w<span class="token punctuation">)</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x63D0;&#x4F9B;&#x7C7B;&#x4F3C;STL&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x652F;&#x6301;  </span>
+x<span class="token punctuation">)</span> <span class="token function">rbegin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token function">rend</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x9006;&#x5411;&#x8FED;&#x4EE3;&#x5668;  </span>
+y<span class="token punctuation">)</span> <span class="token function">get_allocator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//&#x8FD4;&#x56DE;&#x914D;&#x7F6E;&#x5668;</span>
+</code></pre>
+</li>
+</ol>
+<pre class="language-"><code class="lang-cpp">string s1<span class="token punctuation">;</span><span class="token comment">//&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;s1&#x4E3A;&#x7A7A;&#x4E32;</span>
+string <span class="token function">s2</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x5C06;s2&#x521D;&#x59CB;&#x5316;&#x4E3A;s1&#x7684;&#x526F;&#x672C;</span>
+string <span class="token function">s1</span><span class="token punctuation">(</span><span class="token string">&apos;abc&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x5C06;s1&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x9762;&#x503C;&#x526F;&#x672C;</span>
+string <span class="token function">s1</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span><span class="token string">&apos;w&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x5C06;s1&#x521D;&#x59CB;&#x5316;&#x4E3A;&apos;w&apos;&#x7684;n&#x4E2A;&#x526F;&#x672C;</span>
+cin<span class="token operator">&gt;&gt;</span>s1<span class="token punctuation">;</span><span class="token comment">//&#x8BFB;&#x53D6;&#x6709;&#x6548;&#x5B57;&#x7B26;&#xFF0C;&#x9047;&#x5230;&#x7A7A;&#x683C;&#x7ED3;&#x675F;</span>
+<span class="token function">getline</span><span class="token punctuation">(</span>cin<span class="token punctuation">,</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x8BFB;&#x53D6;&#x5B57;&#x7B26;&#x76F4;&#x81F3;&#x9047;&#x5230;&#x6362;&#x884C;(&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x7A7A;&#x683C;)</span>
+<span class="token function">getline</span><span class="token punctuation">(</span>cin<span class="token punctuation">,</span>s1<span class="token punctuation">,</span><span class="token string">&apos;w&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x8BFB;&#x53D6;&#x5B57;&#x7B26;&#x76F4;&#x81F3;&#x9047;&#x5230;&#x5B57;&#x7B26;&apos;w&apos;(&#x53EF;&#x8BFB;&#x53D6;&#x7A7A;&#x683C;&#x548C;&#x6362;&#x884C;)</span>
+s1<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//s1&#x4E3A;&#x7A7A;&#x8FD4;&#x56DE;&#x771F;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x5047;</span>
+<span class="token function">reverse</span><span class="token punctuation">(</span>s1<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>s1<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x5C06;string&#x5BF9;&#x8C61;&#x8FED;&#x4EE3;&#x5668;&#x6307;&#x5411;&#x7684;&#x4E00;&#x6BB5;&#x533A;&#x95F4;&#x5185;&#x5143;&#x7D20;&#x53CD;&#x5411;&#x6392;&#x5E8F;</span>
+s1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E2A;&#x6570;</span>
+s1<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x540C;&#x4E0A;&#xFF0C;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E2A;&#x6570;,&#x4E00;&#x822C;&#x4E0D;&#x600E;&#x4E48;&#x7528;</span>
+s1<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//&#x8FD4;&#x56DE;&#x4F4D;&#x7F6E;&#x4E3A;n&#x7684;&#x5B57;&#x7B26;(&#x4ECE;0&#x5F00;&#x59CB;&#x8BA1;&#x6570;)</span>
+s1<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;abc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x5411;&#x5B57;&#x7B26;&#x4E32;&#x5C3E;&#x90E8;&#x6DFB;&#x52A0;&#x5B57;&#x7B26;&#x4E32;</span>
+s1<span class="token operator">+</span>s2<span class="token punctuation">;</span><span class="token comment">//&#x8FDE;&#x63A5;s1,s2&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</span>
+<span class="token comment">/*&#x53EF;&#x4EE5;&#x628A;&#x4E00;&#x4E2A;string&#x5BF9;&#x8C61;&#x548C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x9762;&#x503C;&#x76F8;&#x8FDE;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x5C06;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x9762;&#x503C;&#x76F8;&#x52A0;&#x3002;
+s1+&apos;w&apos;+&apos;y&apos;&#x8FD9;&#x79CD;&#x76F8;&#x52A0;&#x662F;&#x5141;&#x8BB8;&#x7684;&#x3002;&apos;w&apos;+&apos;y&apos;+s1&#x662F;&#x9519;&#x8BEF;&#x7684;*/</span>
+s1<span class="token operator">=</span>s2<span class="token punctuation">;</span><span class="token comment">//&#x66FF;&#x6362;</span>
+s1<span class="token operator">==</span>s2<span class="token punctuation">;</span><span class="token comment">//&#x5224;&#x65AD;&#x76F8;&#x7B49;&#xFF0C;&#x76F8;&#x7B49;&#x8FD4;&#x56DE;&#x771F;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x5047;</span>
+</code></pre>
+<p>string.find(&quot;&#x5B57;&#x7B26;&#x4E32;&quot;,&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;):&#x4ECE;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x641C;&#x7D22;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD4;&#x56DE;&#x4E0B;&#x6807;</p>
+<h2 id="set&#x5BB9;&#x5668;">Set&#x5BB9;&#x5668;</h2>
+<pre class="language-"><code class="lang-cpp"><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x6307;&#x5411;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x8FED;&#x4EE3;&#x5668;  
+<span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x6E05;&#x9664;&#x6240;&#x6709;&#x5143;&#x7D20;  
+<span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x67D0;&#x4E2A;&#x503C;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;  
+<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5982;&#x679C;&#x96C6;&#x5408;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;<span class="token function">true</span><span class="token punctuation">(</span>&#x771F;&#xFF09;  
+<span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x6307;&#x5411;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E4B;&#x540E;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x4E0D;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;  
+<span class="token function">equal_range</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x96C6;&#x5408;&#x4E2D;&#x4E0E;&#x7ED9;&#x5B9A;&#x503C;&#x76F8;&#x7B49;&#x7684;&#x4E0A;&#x4E0B;&#x9650;&#x7684;&#x4E24;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;  
+<span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5220;&#x9664;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;  
+<span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x88AB;&#x67E5;&#x627E;&#x5230;&#x5143;&#x7D20;&#x7684;&#x8FED;&#x4EE3;&#x5668;  
+<span class="token function">get_allocator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x96C6;&#x5408;&#x7684;&#x5206;&#x914D;&#x5668;  
+<span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x96C6;&#x5408;&#x4E2D;&#x63D2;&#x5165;&#x5143;&#x7D20;  
+<span class="token function">lower_bound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x6307;&#x5411;&#x5927;&#x4E8E;&#xFF08;&#x6216;&#x7B49;&#x4E8E;&#xFF09;&#x67D0;&#x503C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x8FED;&#x4EE3;&#x5668;  
+<span class="token function">key_comp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5143;&#x7D20;&#x95F4;&#x503C;&#x6BD4;&#x8F83;&#x7684;&#x51FD;&#x6570;  
+<span class="token function">max_size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x96C6;&#x5408;&#x80FD;&#x5BB9;&#x7EB3;&#x7684;&#x5143;&#x7D20;&#x7684;&#x6700;&#x5927;&#x9650;&#x503C;  
+<span class="token function">rbegin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x6307;&#x5411;&#x96C6;&#x5408;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x53CD;&#x5411;&#x8FED;&#x4EE3;&#x5668;  
+<span class="token function">rend</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x6307;&#x5411;&#x96C6;&#x5408;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x53CD;&#x5411;&#x8FED;&#x4EE3;&#x5668;  
+<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x96C6;&#x5408;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x6570;&#x76EE;  
+<span class="token function">swap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x53D8;&#x91CF;  
+<span class="token function">upper_bound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x5927;&#x4E8E;&#x67D0;&#x4E2A;&#x503C;&#x5143;&#x7D20;&#x7684;&#x8FED;&#x4EE3;&#x5668;  
+<span class="token function">value_comp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x5143;&#x7D20;&#x95F4;&#x7684;&#x503C;&#x7684;&#x51FD;&#x6570;
+</code></pre>
+<h2 id="&#x4F18;&#x5148;&#x961F;&#x5217;">&#x4F18;&#x5148;&#x961F;&#x5217;</h2>
+<blockquote>
+<p>  &#x666E;&#x901A;&#x7684;&#x961F;&#x5217;&#x662F;&#x4E00;&#x79CD;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5143;&#x7D20;&#x5728;&#x961F;&#x5217;&#x5C3E;&#x8FFD;&#x52A0;&#xFF0C;&#x800C;&#x4ECE;&#x961F;&#x5217;&#x5934;&#x5220;&#x9664;&#x3002;&#x5728;&#x4F18;&#x5148;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x5143;&#x7D20;&#x88AB;&#x8D4B;&#x4E88;&#x4F18;&#x5148;&#x7EA7;&#x3002;&#x5F53;&#x8BBF;&#x95EE;&#x5143;&#x7D20;&#x65F6;&#xFF0C;&#x5177;&#x6709;&#x6700;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x5143;&#x7D20;&#x6700;&#x5148;&#x5220;&#x9664;&#x3002;&#x4F18;&#x5148;&#x961F;&#x5217;&#x5177;&#x6709;&#x6700;&#x9AD8;&#x7EA7;&#x5148;&#x51FA; &#xFF08;first in, largest out&#xFF09;&#x7684;&#x884C;&#x4E3A;&#x7279;&#x5F81;&#x3002;</p>
+</blockquote>
+<pre class="language-"><code class="lang-cpp">priority_queue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>less<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span>s<span class="token punctuation">;</span><span class="token comment">//&#x5B9A;&#x4E49;&#x4F18;&#x5148;&#x7EA7;&#x961F;&#x5217;s&#xFF0C;less&#x8868;&#x793A;&#x6309;&#x7167;&#x9012;&#x51CF;(&#x4ECE;&#x5927;&#x5230;&#x5C0F;)&#x7684;&#x987A;&#x5E8F;&#x63D2;&#x5165;&#x5143;&#x7D20;  </span>
+priority_queue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>greater<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span>s<span class="token punctuation">;</span><span class="token comment">//&#x5B9A;&#x4E49;&#x4F18;&#x5148;&#x7EA7;&#x961F;&#x5217;s&#xFF0C;greater&#x8868;&#x793A;&#x6309;&#x7167;&#x9012;&#x589E;&#xFF08;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#xFF09;&#x7684;&#x987A;&#x5E8F;&#x63D2;&#x5165;&#x5143;&#x7D20;</span>
+<span class="token comment">//&#x57FA;&#x672C;&#x64CD;&#x4F5C;</span>
+<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> &#x961F;&#x5217;&#x4E3A;&#x7A7A;&#x8FD4;&#x56DE;<span class="token number">1</span>  
+<span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   &#x51FA;&#x961F;  
+<span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  &#x5165;&#x961F;  
+<span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   &#x8FD4;&#x56DE;&#x961F;&#x5217;&#x4E2D;&#x4F18;&#x5148;&#x7EA7;&#x6700;&#x9AD8;&#x7684;&#x5143;&#x7D20;  
+<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  &#x8FD4;&#x56DE;&#x961F;&#x5217;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;  
+<span class="token comment">//&#x8FD0;&#x7B97;&#x7B26;&#x91CD;&#x8F7D;</span>
+<span class="token keyword">struct</span> point<span class="token punctuation">{</span>      
+    <span class="token keyword">int</span> x<span class="token punctuation">;</span>      
+    <span class="token keyword">int</span> y<span class="token punctuation">;</span>      
+    <span class="token keyword">int</span> times<span class="token punctuation">;</span>      
+    <span class="token keyword">friend</span> <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span>point a<span class="token punctuation">,</span> point b<span class="token punctuation">)</span>      
+    <span class="token punctuation">{</span>      
+        <span class="token keyword">return</span> a<span class="token punctuation">.</span>times <span class="token operator">&gt;</span> b<span class="token punctuation">.</span>times<span class="token punctuation">;</span>    <span class="token comment">//&#x91CD;&#x8F7D;&#x5C0F;&#x4E8E;&#x53F7;&#x4F7F;&#x5F97;&#x5C0F;&#x7684;&#x5148;&#x51FA;&#x961F;&#x5217;      </span>
+    <span class="token punctuation">}</span>      
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="vector&#x5BB9;&#x5668;">Vector&#x5BB9;&#x5668;</h2>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">//&#x5E38;&#x7528;&#x7684;vector&#x65B9;&#x6CD5;&#xFF1A;</span>
+<span class="token number">1.</span>push_back   &#x5728;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6570;&#x636E;  
+<span class="token number">2.</span>pop_back    &#x53BB;&#x6389;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6570;&#x636E;   
+<span class="token number">3.</span>at                &#x5F97;&#x5230;&#x7F16;&#x53F7;&#x4F4D;&#x7F6E;&#x7684;&#x6570;&#x636E;  
+<span class="token number">4.</span>begin           &#x5F97;&#x5230;&#x6570;&#x7EC4;&#x5934;&#x7684;&#x6307;&#x9488;  
+<span class="token number">5.</span>end             &#x5F97;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5355;&#x5143;<span class="token operator">+</span><span class="token number">1</span>&#x7684;&#x6307;&#x9488;  
+<span class="token number">6</span>&#xFF0E;front        &#x5F97;&#x5230;&#x6570;&#x7EC4;&#x5934;&#x7684;&#x5F15;&#x7528;  
+<span class="token number">7.</span>back            &#x5F97;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5355;&#x5143;&#x7684;&#x5F15;&#x7528;  
+<span class="token number">8.</span>max_size     &#x5F97;&#x5230;vector&#x6700;&#x5927;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x5927;  
+<span class="token number">9.</span>capacity       &#x5F53;&#x524D;vector&#x5206;&#x914D;&#x7684;&#x5927;&#x5C0F;  
+<span class="token number">10.</span>size           &#x5F53;&#x524D;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x7684;&#x5927;&#x5C0F;  
+<span class="token number">11.</span>resize         &#x6539;&#x53D8;&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x6BD4;&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x7684;&#x5927;&#xFF0C;&#x8005;&#x586B;&#x5145;&#x9ED8;&#x8BA4;&#x503C;  
+<span class="token number">12.</span>reserve      &#x6539;&#x53D8;&#x5F53;&#x524D;vecotr&#x6240;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#x7684;&#x5927;&#x5C0F;  
+<span class="token number">13.</span>erase         &#x5220;&#x9664;&#x6307;&#x9488;&#x6307;&#x5411;&#x7684;&#x6570;&#x636E;&#x9879;  
+<span class="token number">14.</span>clear          &#x6E05;&#x7A7A;&#x5F53;&#x524D;&#x7684;vector  
+<span class="token number">15.</span>rbegin        &#x5C06;vector&#x53CD;&#x8F6C;&#x540E;&#x7684;&#x5F00;&#x59CB;&#x6307;&#x9488;&#x8FD4;&#x56DE;<span class="token punctuation">(</span>&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x539F;&#x6765;&#x7684;end<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>  
+<span class="token number">16.</span>rend          &#x5C06;vector&#x53CD;&#x8F6C;&#x6784;&#x7684;&#x7ED3;&#x675F;&#x6307;&#x9488;&#x8FD4;&#x56DE;<span class="token punctuation">(</span>&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x539F;&#x6765;&#x7684;begin<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>  
+<span class="token number">17.</span>empty        &#x5224;&#x65AD;vector&#x662F;&#x5426;&#x4E3A;&#x7A7A;  
+<span class="token number">18.</span>swap         &#x4E0E;&#x53E6;&#x4E00;&#x4E2A;vector&#x4EA4;&#x6362;&#x6570;&#x636E;  
+<span class="token operator">--</span><span class="token operator">-</span>
+c<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>         &#x79FB;&#x9664;&#x5BB9;&#x5668;&#x4E2D;&#x6240;&#x6709;&#x6570;&#x636E;&#x3002;  
+c<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span>         &#x5224;&#x65AD;&#x5BB9;&#x5668;&#x662F;&#x5426;&#x4E3A;&#x7A7A;&#x3002;  
+c<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>pos<span class="token punctuation">)</span>        &#x5220;&#x9664;pos&#x4F4D;&#x7F6E;&#x7684;&#x6570;&#x636E;  
+c<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>beg<span class="token punctuation">,</span>end<span class="token punctuation">)</span> &#x5220;&#x9664;<span class="token punctuation">[</span>beg<span class="token punctuation">,</span>end<span class="token punctuation">)</span>&#x533A;&#x95F4;&#x7684;&#x6570;&#x636E;  
+c<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span>         &#x4F20;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x3002;  
+c<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>pos<span class="token punctuation">,</span>elem<span class="token punctuation">)</span>  &#x5728;pos&#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x4E00;&#x4E2A;elem&#x62F7;&#x8D1D;  
+c<span class="token punctuation">.</span><span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     &#x5220;&#x9664;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x3002;  
+c<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span> &#x5728;&#x5C3E;&#x90E8;&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x3002;  
+c<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>     &#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x8BE5;&#x5BB9;&#x5668;&#x7684;&#x5927;&#x5C0F;  
+c<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span>         &#x56DE;&#x5BB9;&#x5668;&#x4E2D;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x7684;&#x4E2A;&#x6570;&#x3002;  
+c<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>           &#x8FD4;&#x56DE;&#x6307;&#x5411;&#x5BB9;&#x5668;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x8FED;&#x4EE3;&#x5668;  
+c<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>             &#x8FD4;&#x56DE;&#x6307;&#x5411;&#x5BB9;&#x5668;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x8FED;&#x4EE3;&#x5668;
+</code></pre>
+<h2 id="pair&#x5BB9;&#x5668;">Pair&#x5BB9;&#x5668;</h2>
+<p>&#x7C7B;&#x6A21;&#x677F;&#xFF1A;<code>template <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">T1,</span> <span class="token attr-name">class</span> <span class="token attr-name">T2</span><span class="token punctuation">&gt;</span></span> struct pair</code></p>
+<p>&#x53C2;&#x6570;&#xFF1A;T1&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;T2&#x662F;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x529F;&#x80FD;&#xFF1A;pair&#x5C06;&#x4E00;&#x5BF9;&#x503C;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x8FD9;&#x4E00;&#x5BF9;&#x503C;&#x53EF;&#x4EE5;&#x5177;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;T1&#x548C;T2&#xFF09;&#xFF0C;&#x4E24;&#x4E2A;&#x503C;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x7528;pair&#x7684;&#x4E24;&#x4E2A;&#x516C;&#x6709;&#x51FD;&#x6570;first&#x548C;second&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x7528;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">//1.&#x5B9A;&#x4E49;&#xFF08;&#x6784;&#x9020;&#xFF09;&#xFF1A;</span>
+pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token operator">&gt;</span> p1<span class="token punctuation">;</span>  <span class="token comment">//&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;  </span>
+pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token operator">&gt;</span> <span class="token function">p2</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2.4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x7528;&#x7ED9;&#x5B9A;&#x503C;&#x521D;&#x59CB;&#x5316;  </span>
+pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token operator">&gt;</span> <span class="token function">p3</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x62F7;&#x8D1D;&#x6784;&#x9020;&#x51FD;&#x6570;  </span>
+<span class="token comment">//2.&#x8BBF;&#x95EE;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#xFF08;&#x901A;&#x8FC7;first&#x548C;second&#xFF09;&#xFF1A;</span>
+pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token operator">&gt;</span> p1<span class="token punctuation">;</span>  <span class="token comment">//&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;  </span>
+p1<span class="token punctuation">.</span>first <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>  
+p1<span class="token punctuation">.</span>second <span class="token operator">=</span> <span class="token number">2.5</span><span class="token punctuation">;</span>  
+cout <span class="token operator">&lt;&lt;</span> p1<span class="token punctuation">.</span>first <span class="token operator">&lt;&lt;</span> <span class="token string">&apos; &apos;</span> <span class="token operator">&lt;&lt;</span> p1<span class="token punctuation">.</span>second <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>  
+<span class="token comment">//3.&#x8D4B;&#x503C;operator = &#xFF1A;</span>
+<span class="token comment">//&#xFF08;1&#xFF09;&#x5229;&#x7528;make_pair&#xFF1A;</span>
+pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token operator">&gt;</span> p1<span class="token punctuation">;</span>  
+p1 <span class="token operator">=</span> <span class="token function">make_pair</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1.2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token comment">//&#xFF08;2&#xFF09;&#x53D8;&#x91CF;&#x95F4;&#x8D4B;&#x503C;&#xFF1A;</span>
+pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token operator">&gt;</span> <span class="token function">p1</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1.2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">double</span><span class="token operator">&gt;</span> p2 <span class="token operator">=</span> p1<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x5168;&#x6392;&#x5217;&#x51FD;&#x6570;nextpermutation">&#x5168;&#x6392;&#x5217;&#x51FD;&#x6570;next_permutation</h2>
+<p>&#x751F;&#x6210;1-8&#x7684;&#x5168;&#x6392;&#x5217;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> num<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">do</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">7</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d &quot;</span><span class="token punctuation">,</span>num<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span>num<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">next_permutation</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span>num<span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x96C6;&#x5408;&#x8FD0;&#x7B97;&#x6C42;&#x4EA4;&#x96C6;&#x548C;&#x5E76;&#x96C6;">&#x96C6;&#x5408;&#x8FD0;&#x7B97;,&#x6C42;&#x4EA4;&#x96C6;&#x548C;&#x5E76;&#x96C6;</h2>
+<p>STL&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#xFF1A;<code>set_difference&#xFF08;&#xFF09;</code>&#xFF0C;&#x4F5C;&#x7528;&#x662F;&#x6C42;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x7684;&#x5DEE;&#x3002;</p>
+<p>set_difference()&#x7B97;&#x6CD5;&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x96C6;&#x5408;[start1, end1)&#x548C;[start2, end2)&#x7684;&#x5DEE;&#x96C6;, &#x5E76;&#x5C06;&#x5DEE;&#x96C6;&#x5B58;&#x653E;&#x5230;result. 
+&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x4EE5;&#x5E8F;&#x5217;&#x7684;&#x5F62;&#x5F0F;&#x7ED9;&#x51FA;, &#x4E14;&#x5FC5;&#x987B;&#x5148;&#x6309;&#x5347;&#x5E8F;&#x6392;&#x597D;&#x4F4D;&#x7F6E;. 
+set_difference()&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x5411;result&#x5E8F;&#x5217;&#x672B;&#x5C3E;&#x7684;&#x8FED;&#x4EE3;&#x5668;. 
+&#x5982;&#x679C;&#x4E25;&#x683C;&#x5F31;&#x6392;&#x5E8F;&#x7684;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#x5BF9;&#x8C61;cmp&#x672A;&#x6307;&#x5B9A;, set_difference()&#x5C06;&#x4F7F;&#x7528;&lt;&#x64CD;&#x4F5C;&#x7B26;&#x6BD4;&#x8F83;&#x5143;&#x7D20;.</p>
+<p>&#x5177;&#x4F53;&#x7528;&#x6CD5;&#x8BF7;&#x770B;C++&#x5B98;&#x7F51;&#x4ECB;&#x7ECD;&#xFF1A;<a href="http://www.cplusplus.com/reference/algorithm/set_difference/" target="_blank">std::set_difference</a></p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">110</span><span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span><span class="token number">110</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">,</span>m<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">~</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>m<span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>m<span class="token operator">||</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token operator">+</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">sort</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span>b<span class="token operator">+</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token function">v</span><span class="token punctuation">(</span><span class="token number">110</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">::</span>iterator it<span class="token punctuation">;</span>
+        it<span class="token operator">=</span><span class="token function">set_difference</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token operator">+</span>n<span class="token punctuation">,</span>b<span class="token punctuation">,</span>b<span class="token operator">+</span>m<span class="token punctuation">,</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        v<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>it<span class="token operator">-</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">&quot;NULL&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>it<span class="token operator">=</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> it<span class="token operator">!=</span>v<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>it<span class="token punctuation">)</span>
+                cout<span class="token operator">&lt;&lt;</span><span class="token operator">*</span>it<span class="token operator">&lt;&lt;</span><span class="token string">&quot; &quot;</span><span class="token punctuation">;</span>
+            cout<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5176;&#x4ED6;&#x51FD;&#x6570;:</p>
+<pre class="language-"><code class="lang-cpp"><span class="token function">set_union</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>&#x5BF9;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x96C6;&#x5408;&#x5E76;&#x8FD0;&#x7B97;
+<span class="token function">set_intersection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>&#x5BF9;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x96C6;&#x5408;&#x4EA4;&#x8FD0;&#x7B97;
+<span class="token function">set_difference</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>&#x5BF9;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x96C6;&#x5408;&#x5DEE;&#x8FD0;&#x7B97;
+<span class="token function">set_symmetric_difference</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>&#x5BF9;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x96C6;&#x5408;&#x5BF9;&#x79F0;&#x5DEE;&#x8FD0;&#x7B97;
+</code></pre>
+<h2 id="nthelement&#x7528;&#x6CD5;">nth_element&#x7528;&#x6CD5;</h2>
+<p>&#x5934;&#x6587;&#x4EF6;:<code>algorithm</code></p>
+<p>&#x4F5C;&#x7528;:&#x628A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7B2C; n &#x5C0F;&#x7684;&#x5143;&#x7D20;&#x653E;&#x5230;&#x5B83;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x4F4D;&#x7F6E;&#x4E0A;(&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#x662F;&#x4ECE;0&#x5F00;&#x59CB;&#x7684;)</p>
+<p>&#x7528;&#x6CD5;:<code>nth_element(&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x9700;&#x8981;&#x6392;&#x7B2C;&#x51E0;&#x7684;&#x5143;&#x7D20;,&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;)</code></p>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre class="language-"><code class="lang-cpp"><span class="token comment">//1.&#x6570;&#x7EC4;&#x7248;</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">nth_element</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">,</span>a<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//a&#x6570;&#x7EC4;&#x4E2D;&#x5347;&#x5E8F;&#x6392;&#x5217;&#x4E2D;&#x7B2C;2&#x5C0F;&#x7684;&#x5143;&#x7D20;(0,1,2)&#x653E;&#x5728;&#x7B2C;2&#x4E2A;&#x4F4D;&#x7F6E;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d &quot;</span><span class="token punctuation">,</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//&#x8F93;&#x51FA;:0 1 2 4 3</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//2. vector&#x7248;</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token function">b</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">nth_element</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>b<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">,</span>b<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d &quot;</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//&#x8F93;&#x51FA;:0 1 2 4 3</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//3. &#x81EA;&#x5B9A;&#x4E49;&#x6BD4;&#x8F83;&#x51FD;&#x6570;</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">bool</span> <span class="token function">cmp</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token comment">//&#x7C7B;&#x4F3C;sort&#x7684;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x662F;&#x4ECE;&#x5927;&#x5230;&#x5C0F;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token operator">&gt;</span>b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token function">b</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>a<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">nth_element</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>b<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">,</span>b<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>cmp<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x7684;&#x7B2C;4&#x4E2A;(&#x4ECE;0&#x5F00;&#x59CB;&#x6570;)&#x653E;&#x5728;&#x5B83;&#x7684;&#x4F4D;&#x7F6E;&#x4E0A;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d &quot;</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//&#x8F93;&#x51FA;:2 3 4 1 0   </span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="stl&#x4E2D;&#x5305;&#x542B;&#x7684;&#x51FD;&#x6570;">STL&#x4E2D;&#x5305;&#x542B;&#x7684;&#x51FD;&#x6570;</h2>
+<pre class="language-"><code class="lang-bash">for_each<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5BF9;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x4E00;&#x9879;&#x64CD;&#x4F5C;
+find<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x503C;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;
+find_if<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x67D0;&#x4E2A;&#x8C13;&#x8BCD;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;
+find_first_of<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x5143;&#x7D20;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;
+adjacent_find<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x7B2C;&#x4E00;&#x5BF9;&#x76F8;&#x90BB;&#x4E14;&#x76F8;&#x7B49;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;
+count<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x7EDF;&#x8BA1;&#x67D0;&#x4E2A;&#x503C;&#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;
+count_if<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x7EDF;&#x8BA1;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7B26;&#x5408;&#x67D0;&#x4E2A;&#x8C13;&#x8BCD;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;
+mismatch<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x67E5;&#x627E;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7B2C;&#x4E00;&#x5BF9;&#x76F8;&#x5F02;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;
+equal<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x662F;&#x5426;&#x5B8C;&#x5168;&#x76F8;&#x7B49;
+search<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x5B50;&#x5E8F;&#x5217;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;
+find_end<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x5B50;&#x5E8F;&#x5217;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;
+search_n<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x503C;&#x8FDE;&#x7EED;&#x51FA;&#x73B0; n &#x6B21;&#x7684;&#x4F4D;&#x7F6E;
+transform<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5BF9;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x4E00;&#x9879;&#x64CD;&#x4F5C;,&#x5E76;&#x4EA7;&#x751F;&#x76F8;&#x5E94;&#x7684;&#x8F93;&#x51FA;&#x5E8F;&#x5217;
+copy<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x590D;&#x5236;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;<span class="token punctuation">(</span>&#x4ECE;&#x524D;&#x5F80;&#x540E;<span class="token punctuation">)</span>
+copy_backward<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x590D;&#x5236;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;<span class="token punctuation">(</span>&#x4ECE;&#x540E;&#x5F80;&#x524D;<span class="token punctuation">)</span>
+swap<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x503C;
+iter_swap<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x6240;&#x6307;&#x5411;&#x7684;&#x5143;&#x7D20;&#x7684;&#x503C;
+swap_ranges<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x5143;&#x7D20;
+replace<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x628A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x503C;&#x66FF;&#x6362;&#x6210;&#x53E6;&#x4E00;&#x4E2A;&#x503C;
+replace_if<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x628A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7B26;&#x5408;&#x67D0;&#x4E2A;&#x8C13;&#x8BCD;&#x7684;&#x5143;&#x7D20;&#x66FF;&#x6362;&#x6210;&#x53E6;&#x4E00;&#x4E2A;&#x503C;
+replace_copy<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; replace<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+replace_copy_if<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; replace_if<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+fill<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x628A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x586B;&#x5145;&#x4E3A;&#x67D0;&#x4E2A;&#x503C;
+fill_n<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; fill<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x7528;&#x8D77;&#x59CB;&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#x6765;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+generate<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x628A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x586B;&#x5145;&#x4E3A;&#x67D0;&#x4E2A;&#x53D1;&#x751F;&#x5668;&#x7684;&#x8FD4;&#x56DE;&#x503C;
+generate_n<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; generate<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x7528;&#x8D77;&#x59CB;&#x8FED;&#x4EE3;&#x5668;&#x548C;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#x6765;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+remove<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5220;&#x9664;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7B49;&#x4E8E;&#x67D0;&#x4E2A;&#x503C;&#x7684;&#x5143;&#x7D20;
+remove_if<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5220;&#x9664;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7B26;&#x5408;&#x67D0;&#x4E2A;&#x8C13;&#x8BCD;&#x7684;&#x5143;&#x7D20;
+remove_copy<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; remove<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+remove_copy_if<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; remove_if<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+unique<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5220;&#x9664;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x591A;&#x4F59;&#x7684;&#x76F8;&#x90BB;&#x76F8;&#x7B49;&#x5143;&#x7D20;
+unique_copy<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; unique<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+reverse<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x53CD;&#x8F6C;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+reverse_copy<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+rotate<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x65CB;&#x8F6C;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+rotate_copy<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; rotate<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x540C;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+random_shuffle<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x968F;&#x673A;&#x6253;&#x4E71;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x5404;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;
+sort<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5BF9;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;
+stable_sort<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; sort<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x4FDD;&#x8BC1;&#x6392;&#x5E8F;&#x7684;&#x7A33;&#x5B9A;&#x6027;
+partial_sort<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5BF9;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x524D;&#x9762;&#x90E8;&#x5206;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x6392;&#x5E8F;
+parital_sort_copy<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; partial_sort<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x7ED3;&#x679C;&#x8F93;&#x51FA;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;
+nth_element<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x628A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x7B2C; n &#x5C0F;&#x7684;&#x5143;&#x7D20;&#x653E;&#x5230;&#x5B83;&#x6392;&#x5E8F;&#x540E;&#x7684;&#x4F4D;&#x7F6E;&#x4E0A;
+lower_bound<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x4E2D;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x503C;,&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;
+upper_bound<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x4E2D;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x503C;,&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#x7684;&#x540E;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;
+equal_range<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x4E2D;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x503C;,&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x4E0E;&#x8FD9;&#x4E2A;&#x503C;&#x76F8;&#x7B49;&#x7684;&#x5143;&#x7D20;&#x6784;&#x6210;&#x7684;&#x5B50;&#x5E8F;&#x5217;
+binary_search<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5728;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x4E2D;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x67D0;&#x4E2A;&#x503C;,&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5426;&#x51FA;&#x73B0;&#x5728;&#x8FD9;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;
+merge<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;
+inplace_merge<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x6709;&#x5E8F;&#x5E8F;&#x5217;
+partition<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x91CD;&#x65B0;&#x8C03;&#x6574;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;,&#x4F7F;&#x5F97;&#x7B26;&#x5408;&#x67D0;&#x4E2A;&#x8C13;&#x8BCD;&#x7684;&#x5143;&#x7D20;&#x88AB;&#x6392;&#x5728;&#x524D;&#x9762;
+stable_partition<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x540C; partition<span class="token punctuation">(</span><span class="token punctuation">)</span>,&#x4F46;&#x4FDD;&#x8BC1;&#x8C03;&#x6574;&#x7684;&#x7A33;&#x5B9A;&#x6027;
+includes<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x662F;&#x5426;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x5B50;&#x5E8F;&#x5217;<span class="token punctuation">(</span>&#x53EF;&#x4EE5;&#x4E0D;&#x8FDE;&#x7EED;<span class="token punctuation">)</span>
+set_union<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5BF9;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x96C6;&#x5408;&#x5E76;&#x8FD0;&#x7B97;
+set_intersection<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5BF9;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x96C6;&#x5408;&#x4EA4;&#x8FD0;&#x7B97;
+set_difference<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5BF9;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x96C6;&#x5408;&#x5DEE;&#x8FD0;&#x7B97;
+set_symmetric_difference<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5BF9;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x96C6;&#x5408;&#x5BF9;&#x79F0;&#x5DEE;&#x8FD0;&#x7B97;
+make_heap<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x628A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x8C03;&#x6574;&#x4E3A;&#x4E00;&#x4E2A;&#x5806;
+push_heap<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x5411;&#x5806;&#x4E2D;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x5143;&#x7D20;
+pop_heap<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x4ECE;&#x5806;&#x4E2D;&#x63D0;&#x53D6;&#x5806;&#x9876;&#x7684;&#x5143;&#x7D20;
+sort_heap<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x628A;&#x4E00;&#x4E2A;&#x5806;&#x8C03;&#x6574;&#x4E3A;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x5E8F;&#x5217;
+min<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x503C;&#x4E2D;&#x8F83;&#x5C0F;&#x7684;&#x503C;
+max<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x503C;&#x4E2D;&#x8F83;&#x5927;&#x7684;&#x503C;
+min_element<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x6700;&#x5C0F;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;
+max_element<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;
+lexicographical_compare<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x6309;&#x7167;&#x5B57;&#x5178;&#x6B21;&#x5E8F;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;
+next_permutation<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x5B57;&#x5178;&#x6B21;&#x5E8F;&#x4E2D;&#x7531;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;&#x6784;&#x6210;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x6392;&#x5217;&#x5E8F;&#x5217;
+prev_permutation<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8FD4;&#x56DE;&#x5B57;&#x5178;&#x6B21;&#x5E8F;&#x4E2D;&#x7531;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;&#x6784;&#x6210;&#x7684;&#x4E0A;&#x4E00;&#x4E2A;&#x6392;&#x5217;&#x5E8F;&#x5217;
+accumulate<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7684;&#x548C;
+inner_product<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x5185;&#x79EF;
+partial_sum<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x90E8;&#x5206;&#x548C;&#x5E8F;&#x5217;
+adjacent_difference<span class="token punctuation">(</span><span class="token punctuation">)</span> &#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x7684;&#x76F8;&#x90BB;&#x5143;&#x7D20;&#x4E4B;&#x5DEE;&#x5E8F;&#x5217;
+</code></pre>
+<h2 id="&#x5BB9;&#x5668;&#x7684;&#x5404;&#x79CD;&#x4F7F;&#x7528;">&#x5BB9;&#x5668;&#x7684;&#x5404;&#x79CD;&#x4F7F;&#x7528;</h2>
+<p><img src="stl1.png" alt="">
+<img src="stl2.png" alt="">
+<img src="stl3.png" alt=""></p>
+<blockquote>
+<ol>
+<li>vector &#x5C31; &#x662F; &#x4E00; &#x4E2A; &#x667A; &#x80FD;&#x578B; &#x7684; &#x4E00; &#x7EF4;&#x6570; &#x7EC4; , &#x80FD; &#x591F; &#x81EA; &#x52A8; &#x8C03;&#x6574; &#x5B58; &#x50A8; &#x7A7A;&#x95F4; &#x3002; vector &#x8FD8; &#x4F18; &#x5316; &#x4E86;vector<bool>&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;,&#x7528;&#x6BCF;&#x4E00;&#x4F4D;&#x6765;&#x5B58;&#x50A8;&#x4E00;&#x4E2A; bool&#x3002;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x4FE1;&#x606F;&#x5B66;&#x7ADE;&#x8D5B;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x89C4;&#x6A21;&#x4E00;
+&#x822C;&#x662F;&#x7ED9;&#x5B9A;&#x7684;,&#x518D;&#x52A0;&#x4E0A; vector &#x5728;&#x8C03;&#x6574;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x65F6;&#x79FB;&#x52A8;&#x6570;&#x636E;&#x4F1A;&#x82B1;&#x8D39;&#x8F83;&#x591A;&#x7684;&#x65F6;&#x95F4;,&#x56E0;&#x6B64;&#x5728;&#x4FE1;&#x606F;&#x5B66;
+&#x7ADE;&#x8D5B;&#x4E2D; vector &#x5E76;&#x4E0D;&#x662F;&#x5F88;&#x5B9E;&#x7528;&#x3002;</bool></li>
+<li>deque &#x662F;&#x7528;&#x6307;&#x9488;&#x6570;&#x7EC4;&#x6765;&#x5B9E;&#x73B0;&#x7684;,&#x4E24;&#x5934;&#x90FD;&#x7559;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x7A7A;&#x95F4;,&#x56E0;&#x6B64;&#x9996;&#x5C3E;&#x7684;&#x63D2;&#x5165;/&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x5F88;
+&#x5FEB;&#x3002;deque &#x4E00;&#x822C;&#x7528;&#x4F5C;&#x5BB9;&#x5668;&#x9002;&#x914D;&#x5668;(stack&#x3001;queue &#x7B49;)&#x7684;&#x5185;&#x7F6E;&#x5BB9;&#x5668;&#x3002;
+list &#x4E00;&#x822C;&#x7528;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x6765;&#x5B9E;&#x73B0;,&#x53EF;&#x4EE5;&#x4F7F;&#x6211;&#x4EEC;&#x907F;&#x514D;&#x4E66;&#x5199;&#x5927;&#x91CF;&#x91CD;&#x590D;&#x7684;&#x94FE;&#x8868;&#x57FA;&#x672C;&#x64CD;&#x4F5C;,&#x964D;&#x4F4E;&#x7F16;&#x7A0B;
+&#x590D;&#x6742;&#x5EA6;&#x3002;</li>
+<li>stack&#x3001;queue&#x3001;priority_queue &#x90FD;&#x662F;&#x5BB9;&#x5668;&#x9002;&#x914D;&#x5668;&#x3002;&#x7531;&#x4E8E;&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x8F83;&#x5C11;,&#x56E0;&#x6B64; stack
+&#x548C; queue &#x7684;&#x7528;&#x5904;&#x6709;&#x6240;&#x9650;&#x5236;,&#x4F46;&#x5E94;&#x4ED8;&#x4E00;&#x822C;&#x7684;&#x60C5;&#x51B5;&#x90FD;&#x5DF2;&#x7ECF;&#x591F;&#x7528;&#x4E86;&#x3002;priority_queue &#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8C;&#x53C9;
+&#x5806;&#x5B9E;&#x73B0;&#x7684;&#x4F18;&#x5148;&#x961F;&#x5217;,&#x4E0E;&#x4E00;&#x822C;&#x961F;&#x5217;&#x7684;&#x533A;&#x522B;&#x662F;&#x5728;&#x63D0;&#x53D6;&#x5143;&#x7D20;&#x65F6;,&#x4F18;&#x5148;&#x961F;&#x5217;&#x603B;&#x662F;&#x5148;&#x63D0;&#x53D6;&#x6700;&#x5C0F;&#x7684;&#x5143;&#x7D20;&#x3002;
+priority_queue &#x5728;&#x505A;&#x6A21;&#x62DF;&#x9898;&#x65F6;&#x975E;&#x5E38;&#x6709;&#x7528;,&#x56E0;&#x4E3A;&#x505A;&#x6A21;&#x62DF;&#x9898;&#x7684;&#x5173;&#x952E;&#x5C31;&#x662F;&#x8981;&#x5904;&#x7406;&#x597D;&#x4E8B;&#x4EF6;&#x7684;&#x5148;&#x540E;&#x6B21;&#x5E8F;&#x3002;
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x9898;&#x76EE;&#x4E2D;&#x7684;&#x5404;&#x79CD;&#x4E8B;&#x4EF6;&#x90FD;&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;,&#x5E76;&#x6309;&#x7167;&#x9898;&#x76EE;&#x4E2D;&#x7684;&#x89C4;&#x5219;&#x8D4B;&#x4E88;&#x5B83;&#x4EEC;&#x4E0D;&#x540C;&#x7684;&#x4F18;&#x5148;&#x7EA7;,
+&#x91CD;&#x8F7D;&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;&#x3002;&#x7136;&#x540E;,&#x6211;&#x4EEC;&#x628A;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x4E00;&#x4E00;&#x63A8;&#x5165;&#x4F18;&#x5148;&#x961F;&#x5217;,&#x518D;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x5E76;&#x4E00;&#x4E00;&#x52A0;&#x4EE5;&#x5904;&#x7406;
+&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x53E6;&#x5916;,&#x7531;&#x4E8E;&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x7684;&#x9650;&#x5236;,&#x4F18;&#x5148;&#x961F;&#x5217;&#x5F88;&#x96BE;&#x5904;&#x7406;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x9700;&#x8981;&#x6539;&#x53D8;&#x7684;&#x60C5;&#x51B5;
+(&#x4F8B;&#x5982; Dijkstra &#x7B97;&#x6CD5;&#x3001;Prim &#x7B97;&#x6CD5;&#x7B49;)&#x3002;</li>
+<li>STL &#x63D0;&#x4F9B;&#x7684;&#x5173;&#x8054;&#x5BB9;&#x5668;&#x529F;&#x80FD;&#x5341;&#x5206;&#x5F3A;&#x5927;&#x3002;&#x8FD9;&#x56DB;&#x79CD;&#x5173;&#x8054;&#x5BB9;&#x5668;&#x90FD;&#x662F;&#x7528;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x6811;(&#x4E00;&#x822C;&#x662F;&#x7EA2;&#x9ED1;
+&#x6811;)&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x5BB9;&#x5668;&#x5185;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x6709;&#x5E8F;&#x7684;,&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x3001;&#x67E5;&#x627E;&#x7B49;&#x64CD;&#x4F5C;&#x90FD;&#x53EF;&#x4EE5;&#x5728; O(log n)&#x7684;
+&#x65F6;&#x95F4;&#x5185;&#x5B8C;&#x6210;&#x3002;set&#x3001;multiset &#x4E2D;&#x5143;&#x7D20;&#x672C;&#x8EAB;&#x76F4;&#x63A5;&#x53C2;&#x4E0E;&#x6392;&#x5E8F;,&#x6216;&#x8005;&#x8BF4;&#x5143;&#x7D20;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x5173;&#x952E;&#x5B57;;&#x800C; map&#x3001;
+multimap &#x4E2D;&#x53EA;&#x6709;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x4E0E;&#x6392;&#x5E8F;,&#x88AB;&#x6620;&#x5C04;&#x7684;&#x503C;&#x53EA;&#x4F5C;&#x4E3A;&#x5468;&#x56F4;&#x6570;&#x636E;&#x5B58;&#x5728;,&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x88AB;&#x4FEE;&#x6539;&#x3002;&#x53E6;
+&#x5916;,set&#x3001;map &#x4E2D;&#x4E0D;&#x80FD;&#x51FA;&#x73B0;&#x76F8;&#x7B49;&#x7684;&#x5173;&#x952E;&#x5B57;,&#x800C; multiset&#x3001;multimap &#x5219;&#x5141;&#x8BB8;&#x51FA;&#x73B0;&#x76F8;&#x7B49;&#x7684;&#x5173;&#x952E;&#x5B57;&#x3002;
+&#x8FD9;&#x4E9B;&#x5173;&#x8054;&#x5BB9;&#x5668;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5173;&#x952E;&#x5B57;&#x6765;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x3002;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#x64CD;&#x4F5C;&#x7684;&#x6210;&#x5458;&#x51FD;&#x6570;&#x6709; find()&#x3001;
+lower_bound()&#x3001;upper_bound()&#x3001;equal_range()&#x7B49;&#x3002;&#x5728;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x8981;&#x6C42;&#x67E5;&#x627E;&#x7684;&#x5173;&#x952E;&#x5B57;&#x65F6;,find()
+&#x8FD4;&#x56DE;&#x6210;&#x5458;&#x51FD;&#x6570; end()&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4EE5;&#x8868;&#x793A;&#x5931;&#x8D25;,&#x800C;&#x5176;&#x4ED6;&#x4E09;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5219;&#x4E0E;<algorithm>&#x4E2D;&#x7684;&#x540C;
+&#x540D;&#x51FD;&#x6570;&#x76F8;&#x4F3C;&#x3002;&#x6B64;&#x5916;,&#x7531;&#x4E8E; map &#x4E2D;&#x7684;&#x5173;&#x952E;&#x5B57;&#x548C;&#x88AB;&#x6620;&#x5C04;&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;,&#x56E0;&#x6B64; map &#x7C7B;&#x91CD;&#x8F7D;&#x4E86;
+&#x4E0B;&#x6807;&#x8FD0;&#x7B97;&#x7B26;,&#x4F7F;&#x5F97;&#x5143;&#x7D20;&#x7684;&#x8BBF;&#x95EE;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;</algorithm></li>
+</ol>
+</blockquote>
+<h3 id="&#x9AD8;&#x6548;&#x4F4D;&#x8FD0;&#x7B97;-builtin&#x7CFB;&#x5217;&#x51FD;&#x6570;">&#x9AD8;&#x6548;&#x4F4D;&#x8FD0;&#x7B97; <em>_builtin</em>&#x7CFB;&#x5217;&#x51FD;&#x6570;</h3>
+<ol>
+<li>int __builtin_ffs (unsigned int x) 
+  &#x8FD4;&#x56DE;x&#x7684;&#x6700;&#x540E;&#x4E00;&#x4F4D;1&#x7684;&#x662F;&#x4ECE;&#x540E;&#x5411;&#x524D;&#x7B2C;&#x51E0;&#x4F4D;&#xFF0C;&#x6BD4;&#x5982;7368&#xFF08;1110011001000&#xFF09;&#x8FD4;&#x56DE;4&#x3002; </li>
+<li>int __builtin_clz (unsigned int x) 
+  &#x8FD4;&#x56DE;&#x524D;&#x5BFC;&#x7684;0&#x7684;&#x4E2A;&#x6570;&#x3002; </li>
+<li>int <strong>builtin_ctz (unsigned int x) 
+  &#x8FD4;&#x56DE;&#x540E;&#x9762;&#x7684;0&#x4E2A;&#x4E2A;&#x6570;&#xFF0C;&#x548C;</strong>builtin_clz&#x76F8;&#x5BF9;&#x3002; </li>
+<li>int __builtin_popcount (unsigned int x) 
+  &#x8FD4;&#x56DE;&#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x4E2D;1&#x7684;&#x4E2A;&#x6570;&#x3002; </li>
+<li>int __builtin_parity (unsigned int x) 
+  &#x8FD4;&#x56DE;x&#x7684;&#x5947;&#x5076;&#x6821;&#x9A8C;&#x4F4D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;x&#x7684;1&#x7684;&#x4E2A;&#x6570;&#x6A21;2&#x7684;&#x7ED3;&#x679C;&#x3002;</li>
+</ol>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x90FD;&#x6709;&#x76F8;&#x5E94;&#x7684;usigned long&#x548C;usigned long long&#x7248;&#x672C;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;&#x51FD;&#x6570;&#x540D;&#x540E;&#x9762;&#x52A0;&#x4E0A;l&#x6216;ll&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;int __builtin_clzll&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="输入输出加速.html" class="navigation navigation-prev " aria-label="Previous page: 输入输出加速">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pb_ds库用法.html" class="navigation navigation-next " aria-label="Next page: pb_ds库用法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"常用STL及用法","level":"2.2","depth":1,"next":{"title":"pb_ds库用法","level":"2.3","depth":1,"path":"常用技巧/pb_ds库用法.md","ref":"常用技巧/pb_ds库用法.md","articles":[]},"previous":{"title":"输入输出加速","level":"2.1","depth":1,"path":"常用技巧/输入输出加速.md","ref":"常用技巧/输入输出加速.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","prism","prism-themes","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vs.css"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"riba2534-ACM-Template","gitbook":"*"},"file":{"path":"常用技巧/常用STL及用法.md","mtime":"2018-09-19T03:47:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T05:16:58.222Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

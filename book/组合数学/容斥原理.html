@@ -1,0 +1,1906 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>容斥原理 · riba2534-ACM-Template</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="组合数.html" />
+    
+    
+    <link rel="prev" href="BM线性递推.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">常用技巧</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../常用技巧/输入输出加速.html">
+            
+                <a href="../常用技巧/输入输出加速.html">
+            
+                    
+                    输入输出加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../常用技巧/常用STL及用法.html">
+            
+                <a href="../常用技巧/常用STL及用法.html">
+            
+                    
+                    常用STL及用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../常用技巧/pb_ds库用法.html">
+            
+                <a href="../常用技巧/pb_ds库用法.html">
+            
+                    
+                    pb_ds库用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../常用技巧/库函数.html">
+            
+                <a href="../常用技巧/库函数.html">
+            
+                    
+                    库函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../常用技巧/小技巧.html">
+            
+                <a href="../常用技巧/小技巧.html">
+            
+                    
+                    小技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../常用技巧/位运算.html">
+            
+                <a href="../常用技巧/位运算.html">
+            
+                    
+                    位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数论</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数论/欧拉函数.html">
+            
+                <a href="../数论/欧拉函数.html">
+            
+                    
+                    欧拉函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../数论/快速幂.html">
+            
+                <a href="../数论/快速幂.html">
+            
+                    
+                    快速幂/矩阵快速幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../数论/康托展开.html">
+            
+                <a href="../数论/康托展开.html">
+            
+                    
+                    康托展开
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../数论/欧几里得算法.html">
+            
+                <a href="../数论/欧几里得算法.html">
+            
+                    
+                    欧几里得/扩展欧几里得算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../数论/求逆元.html">
+            
+                <a href="../数论/求逆元.html">
+            
+                    
+                    求逆元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../数论/自适应辛普森积分.html">
+            
+                <a href="../数论/自适应辛普森积分.html">
+            
+                    
+                    自适应辛普森积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../数论/素数.html">
+            
+                <a href="../数论/素数.html">
+            
+                    
+                    素数相关/线性筛法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../数论/博弈论.html">
+            
+                <a href="../数论/博弈论.html">
+            
+                    
+                    博弈论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" data-path="../数论/博弈论/巴什博奕.html">
+            
+                <a href="../数论/博弈论/巴什博奕.html">
+            
+                    
+                    巴什博奕
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="../数论/博弈论/威佐夫博弈.html">
+            
+                <a href="../数论/博弈论/威佐夫博弈.html">
+            
+                    
+                    威佐夫博弈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.3" data-path="../数论/博弈论/尼姆博弈.html">
+            
+                <a href="../数论/博弈论/尼姆博弈.html">
+            
+                    
+                    尼姆博弈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.4" data-path="../数论/博弈论/SG函数.html">
+            
+                <a href="../数论/博弈论/SG函数.html">
+            
+                    
+                    SG函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">高精度运算</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../高精度运算/大数的加减乘除.html">
+            
+                <a href="../高精度运算/大数的加减乘除.html">
+            
+                    
+                    大数的加减乘除
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">组合数学</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="母函数.html">
+            
+                <a href="母函数.html">
+            
+                    
+                    母函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="BM线性递推.html">
+            
+                <a href="BM线性递推.html">
+            
+                    
+                    BM线性递推
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.3" data-path="容斥原理.html">
+            
+                <a href="容斥原理.html">
+            
+                    
+                    容斥原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="组合数.html">
+            
+                <a href="组合数.html">
+            
+                    
+                    组合数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="卢卡斯定理.html">
+            
+                <a href="卢卡斯定理.html">
+            
+                    
+                    卢卡斯定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">图论</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../图论/欧拉回路.html">
+            
+                <a href="../图论/欧拉回路.html">
+            
+                    
+                    欧拉回路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../图论/Havel-Hakimi定理.html">
+            
+                <a href="../图论/Havel-Hakimi定理.html">
+            
+                    
+                    Havel-Hakimi定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../图论/最小生成树.html">
+            
+                <a href="../图论/最小生成树.html">
+            
+                    
+                    最小生成树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../图论/最小生成树/Kruakal算法.html">
+            
+                <a href="../图论/最小生成树/Kruakal算法.html">
+            
+                    
+                    Kruakal算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../图论/最小生成树/prime算法.html">
+            
+                <a href="../图论/最小生成树/prime算法.html">
+            
+                    
+                    prime算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../图论/最短路.html">
+            
+                <a href="../图论/最短路.html">
+            
+                    
+                    最短路
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../图论/最短路/Dijkstra算法.html">
+            
+                <a href="../图论/最短路/Dijkstra算法.html">
+            
+                    
+                    Dijkstra算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.2" data-path="../图论/最短路/floyd算法.html">
+            
+                <a href="../图论/最短路/floyd算法.html">
+            
+                    
+                    floyd算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.3" data-path="../图论/最短路/Bell-Ford算法.html">
+            
+                <a href="../图论/最短路/Bell-Ford算法.html">
+            
+                    
+                    Bell-Ford算法以及队列优化SPFA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.4" data-path="../图论/最短路/第k短路.html">
+            
+                <a href="../图论/最短路/第k短路.html">
+            
+                    
+                    第k短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../图论/二分图匹配.html">
+            
+                <a href="../图论/二分图匹配.html">
+            
+                    
+                    二分图匹配
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.5.1" data-path="../图论/二分图匹配/匈牙利算法.html">
+            
+                <a href="../图论/二分图匹配/匈牙利算法.html">
+            
+                    
+                    匈牙利算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.2" data-path="../图论/二分图匹配/二分图染色法.html">
+            
+                <a href="../图论/二分图匹配/二分图染色法.html">
+            
+                    
+                    二分图染色法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.3" data-path="../图论/二分图匹配/最大完备匹配-KM算法.html">
+            
+                <a href="../图论/二分图匹配/最大完备匹配-KM算法.html">
+            
+                    
+                    最大完备匹配-KM算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.4" data-path="../图论/二分图匹配/多重匹配.html">
+            
+                <a href="../图论/二分图匹配/多重匹配.html">
+            
+                    
+                    多重匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.5" data-path="../图论/二分图匹配/最小路径覆盖.html">
+            
+                <a href="../图论/二分图匹配/最小路径覆盖.html">
+            
+                    
+                    最小路径覆盖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.6" data-path="../图论/二分图匹配/最小点集覆盖-König定理.html">
+            
+                <a href="../图论/二分图匹配/最小点集覆盖-König定理.html">
+            
+                    
+                    最小点集覆盖-König定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../图论/网络流.html">
+            
+                <a href="../图论/网络流.html">
+            
+                    
+                    网络流
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.6.1" data-path="../图论/网络流/最大流-EK算法.html">
+            
+                <a href="../图论/网络流/最大流-EK算法.html">
+            
+                    
+                    最大流-EK算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6.2" data-path="../图论/网络流/最大流-ISAP算法.html">
+            
+                <a href="../图论/网络流/最大流-ISAP算法.html">
+            
+                    
+                    最大流-ISAP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6.3" data-path="../图论/网络流/最大流-Dinic算法.html">
+            
+                <a href="../图论/网络流/最大流-Dinic算法.html">
+            
+                    
+                    最大流-Dinic算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6.4" data-path="../图论/网络流/最小费用最大流.html">
+            
+                <a href="../图论/网络流/最小费用最大流.html">
+            
+                    
+                    最小费用最大流-最小费用路算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../图论/图连通.html">
+            
+                <a href="../图论/图连通.html">
+            
+                    
+                    图的连通-tarjan算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../图论/树的直径.html">
+            
+                <a href="../图论/树的直径.html">
+            
+                    
+                    树的直径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="../图论/最近公共祖先.html">
+            
+                <a href="../图论/最近公共祖先.html">
+            
+                    
+                    最近公共祖先LCA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.9.1" data-path="../图论/最近公共祖先/离线Tarjan算法.html">
+            
+                <a href="../图论/最近公共祖先/离线Tarjan算法.html">
+            
+                    
+                    离线Tarjan算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9.2" data-path="../图论/最近公共祖先/在线倍增算法.html">
+            
+                <a href="../图论/最近公共祖先/在线倍增算法.html">
+            
+                    
+                    在线倍增算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9.3" data-path="../图论/最近公共祖先/树剖求lca.html">
+            
+                <a href="../图论/最近公共祖先/树剖求lca.html">
+            
+                    
+                    树剖求lca
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="../图论/拓扑排序.html">
+            
+                <a href="../图论/拓扑排序.html">
+            
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="../图论/搜索.html">
+            
+                <a href="../图论/搜索.html">
+            
+                    
+                    搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.12" data-path="../字符串/KMP算法.html">
+            
+                <a href="../字符串/KMP算法.html">
+            
+                    
+                    KMP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13" data-path="../字符串/扩展KMP算法.html">
+            
+                <a href="../字符串/扩展KMP算法.html">
+            
+                    
+                    扩展KMP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.14" data-path="../字符串/AC自动机算法.html">
+            
+                <a href="../字符串/AC自动机算法.html">
+            
+                    
+                    AC自动机算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.15" data-path="../字符串/字符串最大最小表示法.html">
+            
+                <a href="../字符串/字符串最大最小表示法.html">
+            
+                    
+                    字符串最大最小表示法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.16" data-path="../字符串/Manacher算法.html">
+            
+                <a href="../字符串/Manacher算法.html">
+            
+                    
+                    Manacher算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.17" data-path="../字符串/后缀数组.html">
+            
+                <a href="../字符串/后缀数组.html">
+            
+                    
+                    后缀数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../数据结构/线段树.html">
+            
+                <a href="../数据结构/线段树.html">
+            
+                    
+                    线段树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../数据结构/线段树/单点更新-区间求和.html">
+            
+                <a href="../数据结构/线段树/单点更新-区间求和.html">
+            
+                    
+                    单点更新-区间求和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../数据结构/线段树/单点更新-区间求最值.html">
+            
+                <a href="../数据结构/线段树/单点更新-区间求最值.html">
+            
+                    
+                    单点更新-区间求最值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../数据结构/线段树/区间更新.html">
+            
+                <a href="../数据结构/线段树/区间更新.html">
+            
+                    
+                    区间更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../数据结构/线段树/线段树+离散化.html">
+            
+                <a href="../数据结构/线段树/线段树+离散化.html">
+            
+                    
+                    线段树+离散化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="../数据结构/线段树/扫描线-离散化-矩形面积并.html">
+            
+                <a href="../数据结构/线段树/扫描线-离散化-矩形面积并.html">
+            
+                    
+                    扫描线-离散化-矩形面积并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6" data-path="../数据结构/线段树/扫描线-离散化-矩形面积交.html">
+            
+                <a href="../数据结构/线段树/扫描线-离散化-矩形面积交.html">
+            
+                    
+                    扫描线-离散化-矩形面积交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7" data-path="../数据结构/线段树/值域线段树.html">
+            
+                <a href="../数据结构/线段树/值域线段树.html">
+            
+                    
+                    值域线段树求第k大
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../数据结构/RMQ算法.html">
+            
+                <a href="../数据结构/RMQ算法.html">
+            
+                    
+                    RMQ算法/ST表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../数据结构/树状数组.html">
+            
+                <a href="../数据结构/树状数组.html">
+            
+                    
+                    树状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../数据结构/树链剖分.html">
+            
+                <a href="../数据结构/树链剖分.html">
+            
+                    
+                    树链剖分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../数据结构/主席树.html">
+            
+                <a href="../数据结构/主席树.html">
+            
+                    
+                    主席树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../数据结构/莫队算法.html">
+            
+                <a href="../数据结构/莫队算法.html">
+            
+                    
+                    莫队算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../数据结构/区间不同元素个数.html">
+            
+                <a href="../数据结构/区间不同元素个数.html">
+            
+                    
+                    区间不同元素个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../数据结构/单调栈-单调队列.html">
+            
+                <a href="../数据结构/单调栈-单调队列.html">
+            
+                    
+                    单调栈-单调队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="../数据结构/Trie树.html">
+            
+                <a href="../数据结构/Trie树.html">
+            
+                    
+                    Trie树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="../数据结构/线性基.html">
+            
+                <a href="../数据结构/线性基.html">
+            
+                    
+                    线性基
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="../数据结构/使序列有序的最少交换次数.html">
+            
+                <a href="../数据结构/使序列有序的最少交换次数.html">
+            
+                    
+                    使序列有序的最少交换次数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">动态规划</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../动态规划/区间dp-状压dp.html">
+            
+                <a href="../动态规划/区间dp-状压dp.html">
+            
+                    
+                    区间dp-状压dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../动态规划/最长公共子序列LCS.html">
+            
+                <a href="../动态规划/最长公共子序列LCS.html">
+            
+                    
+                    最长公共子序列LCS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../动态规划/单调递增子序列LIS.html">
+            
+                <a href="../动态规划/单调递增子序列LIS.html">
+            
+                    
+                    单调递增子序列LIS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../动态规划/编辑距离.html">
+            
+                <a href="../动态规划/编辑距离.html">
+            
+                    
+                    编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../动态规划/背包类问题.html">
+            
+                <a href="../动态规划/背包类问题.html">
+            
+                    
+                    背包类问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../动态规划/树形dp.html">
+            
+                <a href="../动态规划/树形dp.html">
+            
+                    
+                    树形dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="../动态规划/数位dp.html">
+            
+                <a href="../动态规划/数位dp.html">
+            
+                    
+                    数位dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="../动态规划/状压dp.html">
+            
+                <a href="../动态规划/状压dp.html">
+            
+                    
+                    状压dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../其他/表达式求值.html">
+            
+                <a href="../其他/表达式求值.html">
+            
+                    
+                    表达式求值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../其他/归并排序.html">
+            
+                <a href="../其他/归并排序.html">
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../其他/计算几何合集.html">
+            
+                <a href="../其他/计算几何合集.html">
+            
+                    
+                    计算几何合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../其他/模拟退火.html">
+            
+                <a href="../其他/模拟退火.html">
+            
+                    
+                    模拟退火
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="../其他/二分查找.html">
+            
+                <a href="../其他/二分查找.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="../其他/各种公式.html">
+            
+                <a href="../其他/各种公式.html">
+            
+                    
+                    各种公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="../其他/java和python.html">
+            
+                <a href="../其他/java和python.html">
+            
+                    
+                    java和python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.8" data-path="../其他/vim配置.html">
+            
+                <a href="../其他/vim配置.html">
+            
+                    
+                    vim配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >容斥原理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5BB9;&#x65A5;&#x539F;&#x7406;&#x603B;&#x7ED3;">&#x5BB9;&#x65A5;&#x539F;&#x7406;&#x603B;&#x7ED3;</h1>
+<h2 id="&#x6982;&#x8FF0;&#xFF1A;">&#x6982;&#x8FF0;&#xFF1A;</h2>
+<p>&#x5148;&#x5F15;&#x5165;<strong>&#x767E;&#x5EA6;&#x767E;&#x79D1;</strong>&#x7684;&#x5B9A;&#x4E49;:</p>
+<blockquote>
+<p>  &#x5728;&#x8BA1;&#x6570;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x6CE8;&#x610F;&#x6CA1;&#x6709;&#x91CD;&#x590D;&#xFF0C;&#x6CA1;&#x6709;&#x9057;&#x6F0F;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x91CD;&#x53E0;&#x90E8;&#x5206;&#x4E0D;&#x88AB;&#x91CD;&#x590D;&#x8BA1;&#x7B97;&#xFF0C;&#x4EBA;&#x4EEC;&#x7814;&#x7A76;&#x51FA;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x8BA1;&#x6570;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7684;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x662F;&#xFF1A;&#x5148;&#x4E0D;&#x8003;&#x8651;&#x91CD;&#x53E0;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x628A;&#x5305;&#x542B;&#x4E8E;&#x67D0;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x76EE;&#x5148;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x628A;&#x8BA1;&#x6570;&#x65F6;&#x91CD;&#x590D;&#x8BA1;&#x7B97;&#x7684;&#x6570;&#x76EE;&#x6392;&#x65A5;&#x51FA;&#x53BB;&#xFF0C;&#x4F7F;&#x5F97;&#x8BA1;&#x7B97;&#x7684;&#x7ED3;&#x679C;&#x65E2;&#x65E0;&#x9057;&#x6F0F;&#x53C8;&#x65E0;&#x91CD;&#x590D;&#xFF0C;&#x8FD9;&#x79CD;&#x8BA1;&#x6570;&#x7684;&#x65B9;&#x6CD5;&#x79F0;&#x4E3A;&#x5BB9;&#x65A5;&#x539F;&#x7406;&#x3002;</p>
+</blockquote>
+<p>&#x63A8;&#x8350;&#x535A;&#x5BA2;:<a href="https://zhuanlan.zhihu.com/p/28877776" target="_blank">Math-&#x7EC4;&#x5408;&#x5B66;&#x3011;&#x5BB9;&#x65A5;&#x539F;&#x7406;&#x7684;&#x62D3;&#x5C55;&#x4EE5;&#x53CA;&#x4E71;&#x5E8F;&#x6392;&#x5217;&#x95EE;&#x9898;</a></p>
+<p>&#x4E00;&#x822C;&#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x5982;&#x4E0B;:</p>
+<p>&#x8981;&#x8BA1;&#x7B97;&#x51E0;&#x4E2A;&#x96C6;&#x5408;&#x5E76;&#x96C6;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5148;&#x5C06;&#x6240;&#x6709;&#x5355;&#x4E2A;&#x96C6;&#x5408;&#x7684;&#x5927;&#x5C0F;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x51CF;&#x53BB;&#x6240;&#x6709;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x76F8;&#x4EA4;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x518D;&#x52A0;&#x56DE;&#x6240;&#x6709;&#x4E09;&#x4E2A;&#x96C6;&#x5408;&#x76F8;&#x4EA4;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x518D;&#x51CF;&#x53BB;&#x6240;&#x6709;&#x56DB;&#x4E2A;&#x96C6;&#x5408;&#x76F8;&#x4EA4;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x4F9D;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;&#x4E00;&#x76F4;&#x8BA1;&#x7B97;&#x5230;&#x6240;&#x6709;&#x96C6;&#x5408;&#x76F8;&#x4EA4;&#x7684;&#x90E8;&#x5206;&#x3002;</p>
+<p><img src="http://www.cppblog.com/images/cppblog_com/vici/000.png" alt=""></p>
+<p>&#x7528;&#x97E6;&#x6069;&#x56FE;&#x6765;&#x8868;&#x793A;:</p>
+<p><img src="http://www.cppblog.com/images/cppblog_com/vici/002.png" alt=""></p>
+<p>&#x4E0A;&#x56FE;&#x5C31;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;:|A&#x222A;B&#x222A;C| = |A|+|B|+|C| - |A&#x2229;B| - |B&#x2229;C| - |C&#x2229;A| + |A&#x2229;B&#x2229;C|</p>
+<p>&#x4F8B;&#x5982;:</p>
+<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6570;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>&#xFF0C;&#x95EE;&#x4ECE;<code>1~n</code>&#x4E2D;&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>&#x4E92;&#x8D28;&#x7684;&#x6570;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x3002;</p>
+<p>&#x5047;&#x8BBE;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo>=</mo><mn>3</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">n=30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mrel">=</span><span class="mord mathrm">3</span><span class="mord mathrm">0</span></span></span></span>&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5148;&#x6C42;&#x51FA;30&#x7684;&#x8D28;&#x56E0;&#x6570;&#xFF0C;30&#x7684;&#x8D28;&#x56E0;&#x6570;&#x4E3A;:<code>2,3,5</code></p>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;3&#x4E2A;&#x96C6;&#x5408;&#xFF0C;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x5206;&#x522B;&#x4E3A;<code>2,3,5</code>&#xFF0C;&#x5168;&#x96C6;&#x5C31;&#x4E3A;&#x4ECE;<code>1~30</code>&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;</p>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C31;&#x4ECE;&#x4E2D;&#x51CF;&#x53BB;2&#x7684;&#x500D;&#x6570;&#xFF0C;3&#x7684;&#x500D;&#x6570;,5&#x7684;&#x500D;&#x6570;&#xFF0C;&#x4F46;&#x662F;6&#x65E2;&#x662F;2&#x7684;&#x500D;&#x6570;&#x4E5F;&#x662F;3&#x7684;&#x500D;&#x6570;&#xFF0C;&#x88AB;&#x591A;&#x7B97;&#x4E86;&#x4E00;&#x6B21;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x51CF;&#x53BB;6&#x7684;&#x500D;&#x6570;&#xFF0C;&#x540C;&#x7406;&#x51CF;&#x53BB;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>&#x2217;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">2*5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">&#x2217;</span><span class="mord mathrm">5</span></span></span></span>&#x7684;&#x500D;&#x6570;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#x2217;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">3*5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#x2217;</span><span class="mord mathrm">5</span></span></span></span>&#x7684;&#x500D;&#x6570;&#xFF0C;&#x6700;&#x540E;&#x52A0;&#x4E0A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>&#x2217;</mo><mn>3</mn><mo>&#x2217;</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">2*3*5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">2</span><span class="mbin">&#x2217;</span><span class="mord mathrm">3</span><span class="mbin">&#x2217;</span><span class="mord mathrm">5</span></span></span></span>&#x7684;&#x500D;&#x6570;&#xFF0C;&#x7528;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x8868;&#x8FBE;&#x4E3A;:
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>n</mi><mi>s</mi><mo>=</mo><mn>3</mn><mn>0</mn><mo>&#x2212;</mo><mfrac><mrow><mn>3</mn><mn>0</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x2212;</mo><mfrac><mrow><mn>3</mn><mn>0</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>&#x2212;</mo><mfrac><mrow><mn>3</mn><mn>0</mn></mrow><mrow><mn>5</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>3</mn><mn>0</mn></mrow><mrow><mn>2</mn><mo>&#x2217;</mo><mn>3</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>3</mn><mn>0</mn></mrow><mrow><mn>2</mn><mo>&#x2217;</mo><mn>5</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mn>3</mn><mn>0</mn></mrow><mrow><mn>3</mn><mo>&#x2217;</mo><mn>5</mn></mrow></mfrac><mo>&#x2212;</mo><mfrac><mrow><mn>3</mn><mn>0</mn></mrow><mrow><mn>2</mn><mo>&#x2217;</mo><mn>3</mn><mo>&#x2217;</mo><mn>5</mn></mrow></mfrac><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">
+ans=30-\frac{30}{2}-\frac{30}{3}-\frac{30}{5}+\frac{30}{2*3}+\frac{30}{2*5}+\frac{30}{3*5}-\frac{30}{2*3*5}=8
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.32144em;"></span><span class="strut bottom" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit">n</span><span class="mord mathit">s</span><span class="mrel">=</span><span class="mord mathrm">3</span><span class="mord mathrm">0</span><span class="mbin">&#x2212;</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">&#x2212;</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">3</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">&#x2212;</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">5</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">+</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span><span class="mbin">&#x2217;</span><span class="mord mathrm">3</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">+</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span><span class="mbin">&#x2217;</span><span class="mord mathrm">5</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">+</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">3</span><span class="mbin">&#x2217;</span><span class="mord mathrm">5</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">&#x2212;</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span><span class="mbin">&#x2217;</span><span class="mord mathrm">3</span><span class="mbin">&#x2217;</span><span class="mord mathrm">5</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">3</span><span class="mord mathrm">0</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord mathrm">8</span></span></span></span></span>
+&#x6240;&#x4EE5;&#x5728;<code>1~30</code>&#x4E2D;&#x4E0E;30&#x4E92;&#x8D28;&#x7684;&#x6570;&#x6709;8&#x4E2A;.</p>
+<p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5B9E;&#x9645;&#x4E0A;&#x4E5F;&#x6B63;&#x662F;&#x6B27;&#x62C9;&#x51FD;&#x6570;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x8BF7;&#x770B;<a href="../&#x6570;&#x8BBA;/&#x6B27;&#x62C9;&#x51FD;&#x6570;.html">&#x6B27;&#x62C9;&#x51FD;&#x6570;</a></p>
+<h2 id="&#x6A21;&#x677F;">&#x6A21;&#x677F;</h2>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span><span class="token number">1010</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//a&#x4FDD;&#x5B58;n&#x7684;&#x8D28;&#x56E0;&#x5B50;,a[0]&#x8868;&#x793A;&#x8D28;&#x56E0;&#x5B50;&#x4E2A;&#x6570;</span>
+<span class="token keyword">void</span> <span class="token function">div</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token comment">//&#x5206;&#x89E3;&#x8D28;&#x56E0;&#x6570;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">*</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+                n<span class="token operator">/</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+            a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span> a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>n<span class="token punctuation">;</span>
+    a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>j<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">get_cnt</span><span class="token punctuation">(</span><span class="token keyword">int</span> mid<span class="token punctuation">)</span><span class="token comment">//1--mid&#x4E4B;&#x95F4;&#x4E0E;n&#x4E92;&#x8D28;&#x7684;&#x6570;&#x6709;&#x591A;&#x5C11;&#x4E2A;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> g<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>sum<span class="token operator">=</span>mid<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
+    b<span class="token punctuation">[</span><span class="token operator">++</span>g<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        t<span class="token operator">=</span>g<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;=</span>g<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            b<span class="token punctuation">[</span><span class="token operator">++</span>t<span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            sum<span class="token operator">+</span><span class="token operator">=</span>mid<span class="token operator">/</span>b<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        g<span class="token operator">=</span>t<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x4F8B;&#x9898;">&#x4F8B;&#x9898;</h2>
+<ol>
+<li><p><a href="http://blog.csdn.net/riba2534/article/details/79202994" target="_blank"> HDU1286 &#x627E;&#x65B0;&#x670B;&#x53CB;(&#x5BB9;&#x65A5;&#x539F;&#x7406;+&#x6B27;&#x62C9;&#x51FD;&#x6570;)</a></p>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x8BB2;&#x7684;&#x90A3;&#x4E2A;&#x9898;&#x610F;&#x4E86;,&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6570;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>&#xFF0C;&#x95EE;&#x4ECE;<code>1~n</code>&#x4E2D;&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>&#x4E92;&#x8D28;&#x7684;&#x6570;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> inf 1000000</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> mem(a,b) memset(a,b,sizeof(a))</span>
+<span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span><span class="token number">1010</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//a&#x4FDD;&#x5B58;n&#x7684;&#x8D28;&#x56E0;&#x5B50;,a[0]&#x8868;&#x793A;&#x8D28;&#x56E0;&#x5B50;&#x4E2A;&#x6570;</span>
+<span class="token keyword">void</span> <span class="token function">div</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token comment">//&#x5206;&#x89E3;&#x8D28;&#x56E0;&#x6570;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">*</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+                n<span class="token operator">/</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+            a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span> a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>n<span class="token punctuation">;</span>
+    a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>j<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">get_cnt</span><span class="token punctuation">(</span><span class="token keyword">int</span> mid<span class="token punctuation">)</span><span class="token comment">//1--mid&#x4E4B;&#x95F4;&#x4E0E;n&#x4E92;&#x8D28;&#x7684;&#x6570;&#x6709;&#x591A;&#x5C11;&#x4E2A;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> g<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>sum<span class="token operator">=</span>mid<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
+    b<span class="token punctuation">[</span><span class="token operator">++</span>g<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        t<span class="token operator">=</span>g<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;=</span>g<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            b<span class="token punctuation">[</span><span class="token operator">++</span>t<span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            sum<span class="token operator">+</span><span class="token operator">=</span>mid<span class="token operator">/</span>b<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        g<span class="token operator">=</span>t<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> t<span class="token punctuation">,</span>n<span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">mem</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">mem</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">div</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span><span class="token function">get_cnt</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p><a href="http://blog.csdn.net/riba2534/article/details/79208214" target="_blank">HDU1695 GCD(&#x5BB9;&#x65A5;&#x539F;&#x7406;)</a></p>
+<p>&#x9898;&#x76EE;&#x7ED9;&#x51FA;&#x4E86;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi><mo separator="true">,</mo><mi>d</mi><mo separator="true">,</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">a,b,c,d,k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mpunct">,</span><span class="mord mathit">c</span><span class="mpunct">,</span><span class="mord mathit">d</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>&#xFF0C;&#x6C42;&#x6709;&#x591A;&#x5C11;&#x5BF9;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo>[</mo><mi>a</mi><mo>&#x2208;</mo><mo separator="true">,</mo><mi>b</mi><mo>]</mo><mo separator="true">,</mo><mi>y</mi><mo>&#x2208;</mo><mo>[</mo><mi>c</mi><mo separator="true">,</mo><mi>d</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">x[a\in,b],y\in[c,d]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span><span class="mopen">[</span><span class="mord mathit">a</span><span class="mrel">&#x2208;</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mrel">&#x2208;</span><span class="mopen">[</span><span class="mord mathit">c</span><span class="mpunct">,</span><span class="mord mathit">d</span><span class="mclose">]</span></span></span></span>)&#xFF0C;&#x6EE1;&#x8DB3;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mi>c</mi><mi>d</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>=</mo><mo>=</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">gcd(x,y)==k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">c</span><span class="mord mathit">d</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mrel">=</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>&#xFF0C;&#x540E;&#x53F0;&#x6570;&#x636E;&#x4FDD;&#x8BC1;&#x4E86;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>&#x548C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span>&#x7684;&#x503C;&#x90FD;&#x4E3A;1&#xFF0C;&#x6240;&#x4EE5;&#x9898;&#x76EE;&#x8F6C;&#x5316;&#x6210;&#x6C42;:&#x4ECE;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mi>b</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[1,b]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mclose">]</span></span></span></span>&#x4E2D;&#x548C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mi>d</mi><mo>]</mo></mrow><annotation encoding="application/x-tex">[1,d]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathit">d</span><span class="mclose">]</span></span></span></span>&#x4E2D;&#x6EE1;&#x8DB3;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mi>c</mi><mi>d</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>=</mo><mo>=</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">gcd(x,y)==k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">c</span><span class="mord mathit">d</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mrel">=</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span>&#x7684;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>&#x7684;&#x5BF9;&#x6570;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x9898;&#x76EE;&#x5C31;&#x53EF;&#x8FDB;&#x4E00;&#x6B65;&#x8F6C;&#x5316;&#x4E3A;&#x6C42;&#x4ECE;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>k</mi></mrow></mfrac><mo>]</mo></mrow><annotation encoding="application/x-tex">[1,\frac{b}{k}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">b</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">]</span></span></span></span>&#x548C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mfrac><mrow><mi>d</mi></mrow><mrow><mi>k</mi></mrow></mfrac><mo>]</mo></mrow><annotation encoding="application/x-tex">[1,\frac{d}{k}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">d</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">]</span></span></span></span>&#x4E2D;&#x6709;&#x591A;&#x5C11;&#x5BF9;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>&#x6EE1;&#x8DB3;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi><mi>c</mi><mi>d</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>=</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">gcd(x,y)==1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit">c</span><span class="mord mathit">d</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mrel">=</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span>(&#x4E92;&#x8D28;)&#x7684;&#x5BF9;&#x6570;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8BA1;&#x7B97;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8F93;&#x5165;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x4F7F;&#x5F97;<code>b&lt;=d</code>,&#x90A3;&#x4E48;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mi>b</mi></mrow><mrow><mi>k</mi></mrow></mfrac><mo>&#x2264;</mo><mfrac><mrow><mi>d</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{b}{k}\leq\frac{d}{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">b</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">&#x2264;</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">d</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4ECE;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mfrac><mrow><mi>d</mi></mrow><mrow><mi>k</mi></mrow></mfrac><mo>]</mo></mrow><annotation encoding="application/x-tex">[1,\frac{d}{k}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">d</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">]</span></span></span></span>&#x4E2D;&#x679A;&#x4E3E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>&#xFF0C;&#x627E;&#x5230;&#x5728;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>1</mn><mo separator="true">,</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>k</mi></mrow></mfrac><mo>]</mo></mrow><annotation encoding="application/x-tex">[1,\frac{b}{k}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">b</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">]</span></span></span></span>&#x4E2D;&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.65952em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span></span></span></span>&#x4E92;&#x8D28;&#x7684;&#x6570;&#x7684;&#x4E2A;&#x6570;:</p>
+<ol>
+<li>&#x5F53;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>&lt;</mo><mo>=</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">i&lt;=\frac{b}{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mrel">&lt;</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">b</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>&#x65F6;&#x679A;&#x4E3E;&#x7684;&#x6570;&#x4F1A;&#x91CD;&#x590D;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x53BB;&#x91CD;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>n</mi><mi>s</mi><mo>=</mo><mfrac><mrow><mi>a</mi><mi>n</mi><mi>s</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">ans=\frac{ans+1}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord mathit">n</span><span class="mord mathit">s</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">a</span><span class="mord mathit mtight">n</span><span class="mord mathit mtight">s</span><span class="mbin mtight">+</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></li>
+<li>&#x5F53;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mo>&gt;</mo><mfrac><mrow><mi>b</mi></mrow><mrow><mi>k</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">i&gt;\frac{b}{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord mathit">i</span><span class="mrel">&gt;</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">b</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>&#x65F6;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x5BB9;&#x65A5;&#x539F;&#x7406;&#x679A;&#x4E3E;&#xFF0C;&#x6700;&#x540E;&#x4E24;&#x6B21;&#x679A;&#x4E3E;&#x7684;&#x548C;&#x5C31;&#x662F;&#x7B54;&#x6848;</li>
+</ol>
+<pre class="language-"><code class="lang-cpp">ll a<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span><span class="token number">1010</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//a&#x4FDD;&#x5B58;n&#x7684;&#x8D28;&#x56E0;&#x5B50;,a[0]&#x8868;&#x793A;&#x8D28;&#x56E0;&#x5B50;&#x4E2A;&#x6570;</span>
+<span class="token keyword">void</span> <span class="token function">div</span><span class="token punctuation">(</span>ll n<span class="token punctuation">)</span><span class="token comment">//&#x5206;&#x89E3;&#x8D28;&#x56E0;&#x6570;</span>
+<span class="token punctuation">{</span>
+    ll j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">*</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+                n<span class="token operator">/</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+            a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span>
+        a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>n<span class="token punctuation">;</span>
+    a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>j<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ll <span class="token function">get_cnt</span><span class="token punctuation">(</span>ll mid<span class="token punctuation">)</span><span class="token comment">//1--mid&#x4E4B;&#x95F4;&#x4E0E;n&#x4E92;&#x8D28;&#x7684;&#x6570;&#x6709;&#x591A;&#x5C11;&#x4E2A;</span>
+<span class="token punctuation">{</span>
+    ll g<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>sum<span class="token operator">=</span>mid<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
+    b<span class="token punctuation">[</span><span class="token operator">++</span>g<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        t<span class="token operator">=</span>g<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>ll j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;=</span>g<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            b<span class="token punctuation">[</span><span class="token operator">++</span>t<span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            sum<span class="token operator">+</span><span class="token operator">=</span>mid<span class="token operator">/</span>b<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        g<span class="token operator">=</span>t<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ll a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>d<span class="token punctuation">,</span>t<span class="token punctuation">,</span>q<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>k<span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld%lld%lld%lld%lld&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">,</span><span class="token operator">&amp;</span>b<span class="token punctuation">,</span><span class="token operator">&amp;</span>c<span class="token punctuation">,</span><span class="token operator">&amp;</span>d<span class="token punctuation">,</span><span class="token operator">&amp;</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;Case %lld: &quot;</span><span class="token punctuation">,</span>q<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>k<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">&quot;0&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        ll sum<span class="token operator">=</span>b<span class="token operator">+</span>d<span class="token punctuation">;</span>
+        b<span class="token operator">=</span><span class="token function">min</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        d<span class="token operator">=</span>sum<span class="token operator">-</span>b<span class="token punctuation">;</span>
+        a<span class="token operator">=</span>b<span class="token operator">/</span>k<span class="token punctuation">,</span>c<span class="token operator">=</span>d<span class="token operator">/</span>k<span class="token punctuation">;</span>
+        ll ans<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>a<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">div</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ans<span class="token operator">+</span><span class="token operator">=</span><span class="token function">get_cnt</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//&#x4ECE;1~a&#x4E2D;&#x4E0E;i&#x4E92;&#x8D28;&#x7684;&#x6570;&#x7684;&#x4E2A;&#x6570;</span>
+        <span class="token punctuation">}</span>
+        ans<span class="token operator">=</span><span class="token punctuation">(</span>ans<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span>a<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>c<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">div</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ans<span class="token operator">+</span><span class="token operator">=</span><span class="token function">get_cnt</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld\n&quot;</span><span class="token punctuation">,</span>ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x200B;</p>
+</li>
+<li><p><a href="http://blog.csdn.net/riba2534/article/details/79202959" target="_blank">HDU2841 Visible Trees(&#x5BB9;&#x65A5;&#x539F;&#x7406;,&#x4E8C;&#x7EF4;)</a></p>
+</li>
+</ol>
+<p>&#x9898;&#x76EE;&#x8F6C;&#x5316;&#x4E00;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x53D8;&#x6210;&#xFF1A;&#x5DF2;&#x77E5;x&#x2208;[1,n],y&#x2208;[1,m]&#x6C42;x&#x548C;y&#x8FD9;&#x4E24;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#x4E92;&#x8D28;&#x7684;&#x6570;&#x7684;&#x4E2A;&#x6570;&#x3002;&#x5229;&#x7528;&#x5BB9;&#x65A5;&#xFF0C;&#x679A;&#x4E3E;x&#x96C6;&#x5408;&#xFF0C;&#x7136;&#x540E;&#x66B4;&#x529B;&#x52A0;&#x8D77;&#x6765;</p>
+<pre class="language-"><code class="lang-cpp">ll a<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span><span class="token number">1010</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//a&#x4FDD;&#x5B58;n&#x7684;&#x8D28;&#x56E0;&#x5B50;,a[0]&#x8868;&#x793A;&#x8D28;&#x56E0;&#x5B50;&#x4E2A;&#x6570;</span>
+<span class="token keyword">void</span> <span class="token function">div</span><span class="token punctuation">(</span>ll n<span class="token punctuation">)</span><span class="token comment">//&#x5206;&#x89E3;&#x8D28;&#x56E0;&#x6570;</span>
+<span class="token punctuation">{</span>
+    ll j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">*</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+                n<span class="token operator">/</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+            a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span> a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>n<span class="token punctuation">;</span>
+    a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>j<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ll <span class="token function">get_cnt</span><span class="token punctuation">(</span>ll mid<span class="token punctuation">)</span><span class="token comment">//1--mid&#x4E4B;&#x95F4;&#x4E0E;n&#x4E92;&#x8D28;&#x7684;&#x6570;&#x6709;&#x591A;&#x5C11;&#x4E2A;</span>
+<span class="token punctuation">{</span>
+    ll g<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>sum<span class="token operator">=</span>mid<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
+    b<span class="token punctuation">[</span><span class="token operator">++</span>g<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        t<span class="token operator">=</span>g<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>ll j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;=</span>g<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            b<span class="token punctuation">[</span><span class="token operator">++</span>t<span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            sum<span class="token operator">+</span><span class="token operator">=</span>mid<span class="token operator">/</span>b<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        g<span class="token operator">=</span>t<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ll t<span class="token punctuation">,</span>n<span class="token punctuation">,</span>m<span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">mem</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">mem</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ll ans<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld%lld&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">div</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ans<span class="token operator">+</span><span class="token operator">=</span><span class="token function">get_cnt</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld\n&quot;</span><span class="token punctuation">,</span>ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ol>
+<li><a href="http://blog.csdn.net/riba2534/article/details/79197374" target="_blank"> HDU4135 Co-prime(&#x5BB9;&#x65A5;&#x539F;&#x7406;)</a></li>
+</ol>
+<p>&#x9898;&#x76EE;&#x7ED9;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x533A;&#x95F4;<code>[a,b]</code>&#x548C;&#x4E00;&#x4E2A;&#x6570;<code>n</code>&#xFF0C;&#x8BA9;&#x4F60;&#x6C42;&#x51FA;<code>a~b</code>&#x4E2D;&#x4E0E;<code>n</code>&#x4E92;&#x8D28;&#x7684;&#x6570;&#x7684;&#x4E2A;&#x6570;,&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x6C42;&#x51FA;&#x4ECE;<code>1~b</code>&#x4E0E;n&#x4E92;&#x8D28;&#x7684;&#x6570;&#x7684;&#x4E2A;&#x6570;<strong>&#x51CF;&#x53BB;</strong>&#x4ECE;<code>1~a</code>&#x4E2D;&#x4E0E;n&#x4E92;&#x8D28;&#x7684;&#x6570;&#x7684;&#x4E2A;&#x6570;</p>
+<pre class="language-"><code class="lang-cpp">ll a<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span><span class="token number">1010</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//a&#x4FDD;&#x5B58;n&#x7684;&#x8D28;&#x56E0;&#x5B50;,a[0]&#x8868;&#x793A;&#x8D28;&#x56E0;&#x5B50;&#x4E2A;&#x6570;</span>
+<span class="token keyword">void</span> <span class="token function">div</span><span class="token punctuation">(</span>ll n<span class="token punctuation">)</span><span class="token comment">//&#x5206;&#x89E3;&#x8D28;&#x56E0;&#x6570;</span>
+<span class="token punctuation">{</span>
+    ll j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">*</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+                n<span class="token operator">/</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+            a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span> a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>n<span class="token punctuation">;</span>
+    a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>j<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ll <span class="token function">get_cnt</span><span class="token punctuation">(</span>ll mid<span class="token punctuation">)</span><span class="token comment">//1--mid&#x4E4B;&#x95F4;&#x4E0E;n&#x4E92;&#x8D28;&#x7684;&#x6570;&#x6709;&#x591A;&#x5C11;&#x4E2A;</span>
+<span class="token punctuation">{</span>
+    ll g<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>sum<span class="token operator">=</span>mid<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
+    b<span class="token punctuation">[</span><span class="token operator">++</span>g<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        t<span class="token operator">=</span>g<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>ll j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;=</span>g<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            b<span class="token punctuation">[</span><span class="token operator">++</span>t<span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            sum<span class="token operator">+</span><span class="token operator">=</span>mid<span class="token operator">/</span>b<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        g<span class="token operator">=</span>t<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ll t<span class="token punctuation">,</span>q<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>n<span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld%lld%lld&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>a<span class="token punctuation">,</span><span class="token operator">&amp;</span>b<span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">div</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;Case #%lld: %lld\n&quot;</span><span class="token punctuation">,</span>q<span class="token operator">++</span><span class="token punctuation">,</span><span class="token function">get_cnt</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token operator">-</span><span class="token function">get_cnt</span><span class="token punctuation">(</span>a<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ol>
+<li><a href="http://blog.csdn.net/riba2534/article/details/79197506" target="_blank"> NYOJ762+POJ1796 &#x7B2C;k&#x4E2A;&#x4E92;&#x8D28;&#x6570;(&#x5BB9;&#x65A5;&#x539F;&#x7406;+&#x4E8C;&#x5206;)</a></li>
+</ol>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5BB9;&#x65A5;&#x539F;&#x7406;&#x77E5;&#x9053;:1~m(m&#x4E3A;&#x4EFB;&#x610F;&#x503C;)&#x4E2D;&#x4E0E;n&#x4E92;&#x8D28;&#x7684;&#x6570;&#x7684;&#x4E2A;&#x6570;</p>
+<p>&#x7136;&#x540E;&#x8003;&#x8651;&#x5229;&#x7528;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x6570;&#x5B57;&#xFF0C;&#x7136;&#x540E;&#x5224;&#x65AD;&#x8FD9;&#x4E2A;&#x6570;&#x5B57;&#x548C;n&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x4E92;&#x8D28;&#x6570;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span><span class="token number">1010</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//a&#x4FDD;&#x5B58;n&#x7684;&#x8D28;&#x56E0;&#x5B50;,a[0]&#x8868;&#x793A;&#x8D28;&#x56E0;&#x5B50;&#x4E2A;&#x6570;</span>
+<span class="token keyword">void</span> <span class="token function">div</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token comment">//&#x5206;&#x89E3;&#x8D28;&#x56E0;&#x6570;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">*</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+                n<span class="token operator">/</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+            a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span> a<span class="token punctuation">[</span><span class="token operator">++</span>j<span class="token punctuation">]</span><span class="token operator">=</span>n<span class="token punctuation">;</span>
+    a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>j<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">get_cnt</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token comment">//&#x5BB9;&#x65A5;&#x539F;&#x7406;&#x6765;&#x5224;&#x65AD;&#x4E8C;&#x5206;&#x7684;mid&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x4E0E;n&#x4E92;&#x8D28;&#x7684;&#x6570;</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> g<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>sum<span class="token operator">=</span>n<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
+    b<span class="token punctuation">[</span><span class="token operator">++</span>g<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&lt;=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        t<span class="token operator">=</span>g<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">&lt;=</span>g<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            b<span class="token punctuation">[</span><span class="token operator">++</span>t<span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            sum<span class="token operator">+</span><span class="token operator">=</span>n<span class="token operator">/</span>b<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        g<span class="token operator">=</span>t<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">erfen</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span><span class="token keyword">int</span> k<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> mid<span class="token punctuation">,</span>l<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>r<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token number">2e9</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>l<span class="token operator">&lt;=</span>r<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        mid<span class="token operator">=</span><span class="token punctuation">(</span>l<span class="token operator">+</span>r<span class="token punctuation">)</span><span class="token operator">&gt;&gt;</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">get_cnt</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token operator">&lt;</span>k<span class="token punctuation">)</span>
+            l<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            r<span class="token operator">=</span>mid<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> l<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">,</span>k<span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">~</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">div</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span><span class="token function">erfen</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="BM线性递推.html" class="navigation navigation-prev " aria-label="Previous page: BM线性递推">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="组合数.html" class="navigation navigation-next " aria-label="Next page: 组合数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"容斥原理","level":"5.3","depth":1,"next":{"title":"组合数","level":"5.4","depth":1,"path":"组合数学/组合数.md","ref":"组合数学/组合数.md","articles":[]},"previous":{"title":"BM线性递推","level":"5.2","depth":1,"path":"组合数学/BM线性递推.md","ref":"组合数学/BM线性递推.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","prism","prism-themes","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vs.css"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"riba2534-ACM-Template","gitbook":"*"},"file":{"path":"组合数学/容斥原理.md","mtime":"2018-09-18T06:58:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T05:16:58.222Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

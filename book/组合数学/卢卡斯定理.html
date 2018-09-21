@@ -1,0 +1,1661 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>卢卡斯定理 · riba2534-ACM-Template</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../图论/欧拉回路.html" />
+    
+    
+    <link rel="prev" href="组合数.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">常用技巧</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../常用技巧/输入输出加速.html">
+            
+                <a href="../常用技巧/输入输出加速.html">
+            
+                    
+                    输入输出加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../常用技巧/常用STL及用法.html">
+            
+                <a href="../常用技巧/常用STL及用法.html">
+            
+                    
+                    常用STL及用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../常用技巧/pb_ds库用法.html">
+            
+                <a href="../常用技巧/pb_ds库用法.html">
+            
+                    
+                    pb_ds库用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../常用技巧/库函数.html">
+            
+                <a href="../常用技巧/库函数.html">
+            
+                    
+                    库函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../常用技巧/小技巧.html">
+            
+                <a href="../常用技巧/小技巧.html">
+            
+                    
+                    小技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../常用技巧/位运算.html">
+            
+                <a href="../常用技巧/位运算.html">
+            
+                    
+                    位运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数论</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数论/欧拉函数.html">
+            
+                <a href="../数论/欧拉函数.html">
+            
+                    
+                    欧拉函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../数论/快速幂.html">
+            
+                <a href="../数论/快速幂.html">
+            
+                    
+                    快速幂/矩阵快速幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../数论/康托展开.html">
+            
+                <a href="../数论/康托展开.html">
+            
+                    
+                    康托展开
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../数论/欧几里得算法.html">
+            
+                <a href="../数论/欧几里得算法.html">
+            
+                    
+                    欧几里得/扩展欧几里得算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../数论/求逆元.html">
+            
+                <a href="../数论/求逆元.html">
+            
+                    
+                    求逆元
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../数论/自适应辛普森积分.html">
+            
+                <a href="../数论/自适应辛普森积分.html">
+            
+                    
+                    自适应辛普森积分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../数论/素数.html">
+            
+                <a href="../数论/素数.html">
+            
+                    
+                    素数相关/线性筛法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../数论/博弈论.html">
+            
+                <a href="../数论/博弈论.html">
+            
+                    
+                    博弈论
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" data-path="../数论/博弈论/巴什博奕.html">
+            
+                <a href="../数论/博弈论/巴什博奕.html">
+            
+                    
+                    巴什博奕
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="../数论/博弈论/威佐夫博弈.html">
+            
+                <a href="../数论/博弈论/威佐夫博弈.html">
+            
+                    
+                    威佐夫博弈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.3" data-path="../数论/博弈论/尼姆博弈.html">
+            
+                <a href="../数论/博弈论/尼姆博弈.html">
+            
+                    
+                    尼姆博弈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.4" data-path="../数论/博弈论/SG函数.html">
+            
+                <a href="../数论/博弈论/SG函数.html">
+            
+                    
+                    SG函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">高精度运算</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../高精度运算/大数的加减乘除.html">
+            
+                <a href="../高精度运算/大数的加减乘除.html">
+            
+                    
+                    大数的加减乘除
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">组合数学</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="母函数.html">
+            
+                <a href="母函数.html">
+            
+                    
+                    母函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="BM线性递推.html">
+            
+                <a href="BM线性递推.html">
+            
+                    
+                    BM线性递推
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="容斥原理.html">
+            
+                <a href="容斥原理.html">
+            
+                    
+                    容斥原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="组合数.html">
+            
+                <a href="组合数.html">
+            
+                    
+                    组合数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.5" data-path="卢卡斯定理.html">
+            
+                <a href="卢卡斯定理.html">
+            
+                    
+                    卢卡斯定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">图论</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../图论/欧拉回路.html">
+            
+                <a href="../图论/欧拉回路.html">
+            
+                    
+                    欧拉回路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../图论/Havel-Hakimi定理.html">
+            
+                <a href="../图论/Havel-Hakimi定理.html">
+            
+                    
+                    Havel-Hakimi定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../图论/最小生成树.html">
+            
+                <a href="../图论/最小生成树.html">
+            
+                    
+                    最小生成树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../图论/最小生成树/Kruakal算法.html">
+            
+                <a href="../图论/最小生成树/Kruakal算法.html">
+            
+                    
+                    Kruakal算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../图论/最小生成树/prime算法.html">
+            
+                <a href="../图论/最小生成树/prime算法.html">
+            
+                    
+                    prime算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../图论/最短路.html">
+            
+                <a href="../图论/最短路.html">
+            
+                    
+                    最短路
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../图论/最短路/Dijkstra算法.html">
+            
+                <a href="../图论/最短路/Dijkstra算法.html">
+            
+                    
+                    Dijkstra算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.2" data-path="../图论/最短路/floyd算法.html">
+            
+                <a href="../图论/最短路/floyd算法.html">
+            
+                    
+                    floyd算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.3" data-path="../图论/最短路/Bell-Ford算法.html">
+            
+                <a href="../图论/最短路/Bell-Ford算法.html">
+            
+                    
+                    Bell-Ford算法以及队列优化SPFA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.4" data-path="../图论/最短路/第k短路.html">
+            
+                <a href="../图论/最短路/第k短路.html">
+            
+                    
+                    第k短路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../图论/二分图匹配.html">
+            
+                <a href="../图论/二分图匹配.html">
+            
+                    
+                    二分图匹配
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.5.1" data-path="../图论/二分图匹配/匈牙利算法.html">
+            
+                <a href="../图论/二分图匹配/匈牙利算法.html">
+            
+                    
+                    匈牙利算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.2" data-path="../图论/二分图匹配/二分图染色法.html">
+            
+                <a href="../图论/二分图匹配/二分图染色法.html">
+            
+                    
+                    二分图染色法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.3" data-path="../图论/二分图匹配/最大完备匹配-KM算法.html">
+            
+                <a href="../图论/二分图匹配/最大完备匹配-KM算法.html">
+            
+                    
+                    最大完备匹配-KM算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.4" data-path="../图论/二分图匹配/多重匹配.html">
+            
+                <a href="../图论/二分图匹配/多重匹配.html">
+            
+                    
+                    多重匹配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.5" data-path="../图论/二分图匹配/最小路径覆盖.html">
+            
+                <a href="../图论/二分图匹配/最小路径覆盖.html">
+            
+                    
+                    最小路径覆盖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5.6" data-path="../图论/二分图匹配/最小点集覆盖-König定理.html">
+            
+                <a href="../图论/二分图匹配/最小点集覆盖-König定理.html">
+            
+                    
+                    最小点集覆盖-König定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../图论/网络流.html">
+            
+                <a href="../图论/网络流.html">
+            
+                    
+                    网络流
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.6.1" data-path="../图论/网络流/最大流-EK算法.html">
+            
+                <a href="../图论/网络流/最大流-EK算法.html">
+            
+                    
+                    最大流-EK算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6.2" data-path="../图论/网络流/最大流-ISAP算法.html">
+            
+                <a href="../图论/网络流/最大流-ISAP算法.html">
+            
+                    
+                    最大流-ISAP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6.3" data-path="../图论/网络流/最大流-Dinic算法.html">
+            
+                <a href="../图论/网络流/最大流-Dinic算法.html">
+            
+                    
+                    最大流-Dinic算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6.4" data-path="../图论/网络流/最小费用最大流.html">
+            
+                <a href="../图论/网络流/最小费用最大流.html">
+            
+                    
+                    最小费用最大流-最小费用路算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../图论/图连通.html">
+            
+                <a href="../图论/图连通.html">
+            
+                    
+                    图的连通-tarjan算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../图论/树的直径.html">
+            
+                <a href="../图论/树的直径.html">
+            
+                    
+                    树的直径
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="../图论/最近公共祖先.html">
+            
+                <a href="../图论/最近公共祖先.html">
+            
+                    
+                    最近公共祖先LCA
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.9.1" data-path="../图论/最近公共祖先/离线Tarjan算法.html">
+            
+                <a href="../图论/最近公共祖先/离线Tarjan算法.html">
+            
+                    
+                    离线Tarjan算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9.2" data-path="../图论/最近公共祖先/在线倍增算法.html">
+            
+                <a href="../图论/最近公共祖先/在线倍增算法.html">
+            
+                    
+                    在线倍增算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9.3" data-path="../图论/最近公共祖先/树剖求lca.html">
+            
+                <a href="../图论/最近公共祖先/树剖求lca.html">
+            
+                    
+                    树剖求lca
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="../图论/拓扑排序.html">
+            
+                <a href="../图论/拓扑排序.html">
+            
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="../图论/搜索.html">
+            
+                <a href="../图论/搜索.html">
+            
+                    
+                    搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.12" data-path="../字符串/KMP算法.html">
+            
+                <a href="../字符串/KMP算法.html">
+            
+                    
+                    KMP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13" data-path="../字符串/扩展KMP算法.html">
+            
+                <a href="../字符串/扩展KMP算法.html">
+            
+                    
+                    扩展KMP算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.14" data-path="../字符串/AC自动机算法.html">
+            
+                <a href="../字符串/AC自动机算法.html">
+            
+                    
+                    AC自动机算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.15" data-path="../字符串/字符串最大最小表示法.html">
+            
+                <a href="../字符串/字符串最大最小表示法.html">
+            
+                    
+                    字符串最大最小表示法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.16" data-path="../字符串/Manacher算法.html">
+            
+                <a href="../字符串/Manacher算法.html">
+            
+                    
+                    Manacher算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.17" data-path="../字符串/后缀数组.html">
+            
+                <a href="../字符串/后缀数组.html">
+            
+                    
+                    后缀数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../数据结构/线段树.html">
+            
+                <a href="../数据结构/线段树.html">
+            
+                    
+                    线段树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../数据结构/线段树/单点更新-区间求和.html">
+            
+                <a href="../数据结构/线段树/单点更新-区间求和.html">
+            
+                    
+                    单点更新-区间求和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../数据结构/线段树/单点更新-区间求最值.html">
+            
+                <a href="../数据结构/线段树/单点更新-区间求最值.html">
+            
+                    
+                    单点更新-区间求最值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../数据结构/线段树/区间更新.html">
+            
+                <a href="../数据结构/线段树/区间更新.html">
+            
+                    
+                    区间更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../数据结构/线段树/线段树+离散化.html">
+            
+                <a href="../数据结构/线段树/线段树+离散化.html">
+            
+                    
+                    线段树+离散化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="../数据结构/线段树/扫描线-离散化-矩形面积并.html">
+            
+                <a href="../数据结构/线段树/扫描线-离散化-矩形面积并.html">
+            
+                    
+                    扫描线-离散化-矩形面积并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6" data-path="../数据结构/线段树/扫描线-离散化-矩形面积交.html">
+            
+                <a href="../数据结构/线段树/扫描线-离散化-矩形面积交.html">
+            
+                    
+                    扫描线-离散化-矩形面积交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7" data-path="../数据结构/线段树/值域线段树.html">
+            
+                <a href="../数据结构/线段树/值域线段树.html">
+            
+                    
+                    值域线段树求第k大
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../数据结构/RMQ算法.html">
+            
+                <a href="../数据结构/RMQ算法.html">
+            
+                    
+                    RMQ算法/ST表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../数据结构/树状数组.html">
+            
+                <a href="../数据结构/树状数组.html">
+            
+                    
+                    树状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../数据结构/树链剖分.html">
+            
+                <a href="../数据结构/树链剖分.html">
+            
+                    
+                    树链剖分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../数据结构/主席树.html">
+            
+                <a href="../数据结构/主席树.html">
+            
+                    
+                    主席树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../数据结构/莫队算法.html">
+            
+                <a href="../数据结构/莫队算法.html">
+            
+                    
+                    莫队算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../数据结构/区间不同元素个数.html">
+            
+                <a href="../数据结构/区间不同元素个数.html">
+            
+                    
+                    区间不同元素个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../数据结构/单调栈-单调队列.html">
+            
+                <a href="../数据结构/单调栈-单调队列.html">
+            
+                    
+                    单调栈-单调队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="../数据结构/Trie树.html">
+            
+                <a href="../数据结构/Trie树.html">
+            
+                    
+                    Trie树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="../数据结构/线性基.html">
+            
+                <a href="../数据结构/线性基.html">
+            
+                    
+                    线性基
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="../数据结构/使序列有序的最少交换次数.html">
+            
+                <a href="../数据结构/使序列有序的最少交换次数.html">
+            
+                    
+                    使序列有序的最少交换次数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">动态规划</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../动态规划/区间dp-状压dp.html">
+            
+                <a href="../动态规划/区间dp-状压dp.html">
+            
+                    
+                    区间dp-状压dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../动态规划/最长公共子序列LCS.html">
+            
+                <a href="../动态规划/最长公共子序列LCS.html">
+            
+                    
+                    最长公共子序列LCS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../动态规划/单调递增子序列LIS.html">
+            
+                <a href="../动态规划/单调递增子序列LIS.html">
+            
+                    
+                    单调递增子序列LIS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../动态规划/编辑距离.html">
+            
+                <a href="../动态规划/编辑距离.html">
+            
+                    
+                    编辑距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../动态规划/背包类问题.html">
+            
+                <a href="../动态规划/背包类问题.html">
+            
+                    
+                    背包类问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../动态规划/树形dp.html">
+            
+                <a href="../动态规划/树形dp.html">
+            
+                    
+                    树形dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="../动态规划/数位dp.html">
+            
+                <a href="../动态规划/数位dp.html">
+            
+                    
+                    数位dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="../动态规划/状压dp.html">
+            
+                <a href="../动态规划/状压dp.html">
+            
+                    
+                    状压dp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../其他/表达式求值.html">
+            
+                <a href="../其他/表达式求值.html">
+            
+                    
+                    表达式求值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../其他/归并排序.html">
+            
+                <a href="../其他/归并排序.html">
+            
+                    
+                    归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../其他/计算几何合集.html">
+            
+                <a href="../其他/计算几何合集.html">
+            
+                    
+                    计算几何合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../其他/模拟退火.html">
+            
+                <a href="../其他/模拟退火.html">
+            
+                    
+                    模拟退火
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="../其他/二分查找.html">
+            
+                <a href="../其他/二分查找.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="../其他/各种公式.html">
+            
+                <a href="../其他/各种公式.html">
+            
+                    
+                    各种公式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="../其他/java和python.html">
+            
+                <a href="../其他/java和python.html">
+            
+                    
+                    java和python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.8" data-path="../其他/vim配置.html">
+            
+                <a href="../其他/vim配置.html">
+            
+                    
+                    vim配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >卢卡斯定理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5362;&#x5361;&#x65AF;&#x5B9A;&#x7406;">&#x5362;&#x5361;&#x65AF;&#x5B9A;&#x7406;</h1>
+<p>&#x7ED9;&#x5B9A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>m</mi><mo separator="true">,</mo><mi>p</mi><mo>(</mo><mn>1</mn><mo>&#x2264;</mo><mi>n</mi><mo separator="true">,</mo><mi>m</mi><mo separator="true">,</mo><mi>p</mi><mo>&#x2264;</mo><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">n,m,p(1\le n,m,p\le 10^5)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span><span class="mpunct">,</span><span class="mord mathit">m</span><span class="mpunct">,</span><span class="mord mathit">p</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mrel">&#x2264;</span><span class="mord mathit">n</span><span class="mpunct">,</span><span class="mord mathit">m</span><span class="mpunct">,</span><span class="mord mathit">p</span><span class="mrel">&#x2264;</span><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p>&#x6C42; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow><mrow><mi>m</mi></mrow></msubsup><mtext>&#xA0;</mtext><mi>m</mi><mi>o</mi><mi>d</mi><mtext>&#xA0;</mtext><mi>p</mi></mrow><annotation encoding="application/x-tex">C_{n+m}^{m}\ mod\ p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.999771em;vertical-align:-0.305331em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist"><span style="top:0.24700000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">+</span><span class="mord mathit mtight">m</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit"><span class="mspace">&#xA0;</span><span class="mord mathit">m</span></span><span class="mord mathit">o</span><span class="mord mathit">d</span><span class="mord mathit"><span class="mspace">&#xA0;</span><span class="mord mathit">p</span></span></span></span></span></p>
+<p>&#x4FDD;&#x8BC1;P&#x4E3A;prime</p>
+<p>C&#x8868;&#x793A;&#x7EC4;&#x5408;&#x6570;&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;algorithm&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstdio&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">define</span> ed 100005</span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> k<span class="token punctuation">,</span>n<span class="token punctuation">,</span>m<span class="token punctuation">,</span>p<span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token keyword">long</span> a<span class="token punctuation">[</span>ed<span class="token punctuation">]</span><span class="token punctuation">,</span>b<span class="token punctuation">[</span>ed<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">lucas</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token operator">&lt;</span>y<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token operator">&lt;</span>p<span class="token punctuation">)</span> <span class="token keyword">return</span> b<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span>x<span class="token operator">-</span>y<span class="token punctuation">]</span><span class="token operator">%</span>p<span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token function">lucas</span><span class="token punctuation">(</span>x<span class="token operator">/</span>p<span class="token punctuation">,</span>y<span class="token operator">/</span>p<span class="token punctuation">)</span><span class="token operator">*</span><span class="token function">lucas</span><span class="token punctuation">(</span>x<span class="token operator">%</span>p<span class="token punctuation">,</span>y<span class="token operator">%</span>p<span class="token punctuation">)</span><span class="token operator">%</span>p<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%d%d%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>m<span class="token punctuation">,</span><span class="token operator">&amp;</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token operator">+</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>b<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>i<span class="token operator">%</span>p<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token operator">+</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">(</span>p<span class="token operator">-</span>p<span class="token operator">/</span>i<span class="token punctuation">)</span><span class="token operator">*</span>a<span class="token punctuation">[</span>p<span class="token operator">%</span>i<span class="token punctuation">]</span><span class="token operator">%</span>p<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token operator">+</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">%</span>p<span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld\n&quot;</span><span class="token punctuation">,</span><span class="token function">lucas</span><span class="token punctuation">(</span>n<span class="token operator">+</span>m<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        k<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6269;&#x5C55;&#x5362;&#x5361;&#x65AF;</p>
+<p>&#x6C42;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mi>n</mi><mi>m</mi></msubsup><mo><mo>mod</mo></mo><mrow><mi>p</mi></mrow></mrow><annotation encoding="application/x-tex">C_n^m \bmod{p}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.9414399999999999em;vertical-align:-0.247em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-left:-0.07153em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">n</span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin"><span class="mspace negativemediumspace"></span><span class="mspace thickspace"></span>mod</span><span class="mord textstyle uncramped"><span class="mspace thickspace"></span><span class="mspace negativemediumspace"></span><span class="mord mathit">p</span></span></span></span></span></p>
+<p>1&#x2264;m&#x2264;n&#x2264;10^{18}, 2&#x2264;p&#x2264;1000000&#xFF0C;<strong>&#x4E0D;&#x4FDD;&#x8BC1; pp &#x662F;&#x8D28;&#x6570;</strong>&#x3002;</p>
+<pre class="language-"><code class="lang-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+ll <span class="token function">exgcd</span><span class="token punctuation">(</span>ll a<span class="token punctuation">,</span>ll b<span class="token punctuation">,</span>ll <span class="token operator">&amp;</span>x<span class="token punctuation">,</span>ll <span class="token operator">&amp;</span>y<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>x<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>y<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token keyword">return</span> a<span class="token punctuation">;</span><span class="token punctuation">}</span>
+    ll res<span class="token operator">=</span><span class="token function">exgcd</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span>a<span class="token operator">%</span>b<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">,</span>t<span class="token punctuation">;</span>
+    t<span class="token operator">=</span>x<span class="token punctuation">;</span>x<span class="token operator">=</span>y<span class="token punctuation">;</span>y<span class="token operator">=</span>t<span class="token operator">-</span>a<span class="token operator">/</span>b<span class="token operator">*</span>y<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ll p<span class="token punctuation">;</span>
+<span class="token keyword">inline</span> ll <span class="token function">power</span><span class="token punctuation">(</span>ll a<span class="token punctuation">,</span>ll b<span class="token punctuation">,</span>ll mod<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ll sm<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>sm<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>b<span class="token punctuation">;</span>b<span class="token operator">&gt;&gt;=</span><span class="token number">1</span><span class="token punctuation">,</span>a<span class="token operator">=</span>a<span class="token operator">*</span>a<span class="token operator">%</span>mod<span class="token punctuation">)</span><span class="token keyword">if</span><span class="token punctuation">(</span>b<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span>
+        sm<span class="token operator">=</span>sm<span class="token operator">*</span>a<span class="token operator">%</span>mod<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> sm<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ll <span class="token function">fac</span><span class="token punctuation">(</span>ll n<span class="token punctuation">,</span>ll pi<span class="token punctuation">,</span>ll pk<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>n<span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    ll res<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">register</span> ll i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>pk<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">%</span>pi<span class="token punctuation">)</span><span class="token punctuation">(</span>res<span class="token operator">*</span><span class="token operator">=</span>i<span class="token punctuation">)</span><span class="token operator">%</span><span class="token operator">=</span>pk<span class="token punctuation">;</span>
+    res<span class="token operator">=</span><span class="token function">power</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span>n<span class="token operator">/</span>pk<span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">register</span> ll i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token operator">%</span>pk<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">%</span>pi<span class="token punctuation">)</span><span class="token punctuation">(</span>res<span class="token operator">*</span><span class="token operator">=</span>i<span class="token punctuation">)</span><span class="token operator">%</span><span class="token operator">=</span>pk<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> res<span class="token operator">*</span><span class="token function">fac</span><span class="token punctuation">(</span>n<span class="token operator">/</span>pi<span class="token punctuation">,</span>pi<span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token operator">%</span>pk<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">inline</span> ll <span class="token function">inv</span><span class="token punctuation">(</span>ll n<span class="token punctuation">,</span>ll mod<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ll x<span class="token punctuation">,</span>y<span class="token punctuation">;</span>
+    <span class="token function">exgcd</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>mod<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>x<span class="token operator">+</span><span class="token operator">=</span>mod<span class="token punctuation">)</span><span class="token operator">&gt;</span>mod<span class="token operator">?</span>x<span class="token operator">-</span>mod<span class="token operator">:</span>x<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">inline</span> ll <span class="token function">CRT</span><span class="token punctuation">(</span>ll b<span class="token punctuation">,</span>ll mod<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> b<span class="token operator">*</span><span class="token function">inv</span><span class="token punctuation">(</span>p<span class="token operator">/</span>mod<span class="token punctuation">,</span>mod<span class="token punctuation">)</span><span class="token operator">%</span>p<span class="token operator">*</span><span class="token punctuation">(</span>p<span class="token operator">/</span>mod<span class="token punctuation">)</span><span class="token operator">%</span>p<span class="token punctuation">;</span><span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> MAXN<span class="token operator">=</span><span class="token number">11</span><span class="token punctuation">;</span>
+<span class="token keyword">static</span> ll n<span class="token punctuation">,</span>m<span class="token punctuation">;</span>
+<span class="token keyword">static</span> ll w<span class="token punctuation">[</span>MAXN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">inline</span> ll <span class="token function">C</span><span class="token punctuation">(</span>ll n<span class="token punctuation">,</span>ll m<span class="token punctuation">,</span>ll pi<span class="token punctuation">,</span>ll pk<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ll up<span class="token operator">=</span><span class="token function">fac</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>pi<span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token punctuation">,</span>d1<span class="token operator">=</span><span class="token function">fac</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>pi<span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token punctuation">,</span>d2<span class="token operator">=</span><span class="token function">fac</span><span class="token punctuation">(</span>n<span class="token operator">-</span>m<span class="token punctuation">,</span>pi<span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ll k<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">register</span> ll i<span class="token operator">=</span>n<span class="token punctuation">;</span>i<span class="token punctuation">;</span>i<span class="token operator">/</span><span class="token operator">=</span>pi<span class="token punctuation">)</span>k<span class="token operator">+</span><span class="token operator">=</span>i<span class="token operator">/</span>pi<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">register</span> ll i<span class="token operator">=</span>m<span class="token punctuation">;</span>i<span class="token punctuation">;</span>i<span class="token operator">/</span><span class="token operator">=</span>pi<span class="token punctuation">)</span>k<span class="token operator">-</span><span class="token operator">=</span>i<span class="token operator">/</span>pi<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">register</span> ll i<span class="token operator">=</span>n<span class="token operator">-</span>m<span class="token punctuation">;</span>i<span class="token punctuation">;</span>i<span class="token operator">/</span><span class="token operator">=</span>pi<span class="token punctuation">)</span>k<span class="token operator">-</span><span class="token operator">=</span>i<span class="token operator">/</span>pi<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> up<span class="token operator">*</span><span class="token function">inv</span><span class="token punctuation">(</span>d1<span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token operator">%</span>pk<span class="token operator">*</span><span class="token function">inv</span><span class="token punctuation">(</span>d2<span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token operator">%</span>pk<span class="token operator">*</span><span class="token function">power</span><span class="token punctuation">(</span>pi<span class="token punctuation">,</span>k<span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token operator">%</span>pk<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">inline</span> ll <span class="token function">exlucus</span><span class="token punctuation">(</span>ll n<span class="token punctuation">,</span>ll m<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ll res<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>tmp<span class="token operator">=</span>p<span class="token punctuation">,</span>pk<span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">int</span> lim<span class="token operator">=</span><span class="token function">sqrt</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">register</span> <span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>lim<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token keyword">if</span><span class="token punctuation">(</span>tmp<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        pk<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token keyword">while</span><span class="token punctuation">(</span>tmp<span class="token operator">%</span>i<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>pk<span class="token operator">*</span><span class="token operator">=</span>i<span class="token punctuation">,</span>tmp<span class="token operator">/</span><span class="token operator">=</span>i<span class="token punctuation">;</span>
+        <span class="token punctuation">(</span>res<span class="token operator">+</span><span class="token operator">=</span><span class="token function">CRT</span><span class="token punctuation">(</span><span class="token function">C</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">,</span>i<span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token punctuation">,</span>pk<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token operator">=</span>p<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>tmp<span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">(</span>res<span class="token operator">+</span><span class="token operator">=</span><span class="token function">CRT</span><span class="token punctuation">(</span><span class="token function">C</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">,</span>tmp<span class="token punctuation">,</span>tmp<span class="token punctuation">)</span><span class="token punctuation">,</span>tmp<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">%</span><span class="token operator">=</span>p<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">&quot;%lld%lld%d&quot;</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">,</span><span class="token operator">&amp;</span>m<span class="token punctuation">,</span><span class="token operator">&amp;</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span><span class="token function">exlucus</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="组合数.html" class="navigation navigation-prev " aria-label="Previous page: 组合数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../图论/欧拉回路.html" class="navigation navigation-next " aria-label="Next page: 欧拉回路">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"卢卡斯定理","level":"5.5","depth":1,"next":{"title":"欧拉回路","level":"6.1","depth":1,"path":"图论/欧拉回路.md","ref":"图论/欧拉回路.md","articles":[]},"previous":{"title":"组合数","level":"5.4","depth":1,"path":"组合数学/组合数.md","ref":"组合数学/组合数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","prism","prism-themes","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-vs.css"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"prism-themes":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"riba2534-ACM-Template","gitbook":"*"},"file":{"path":"组合数学/卢卡斯定理.md","mtime":"2018-09-12T08:30:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T05:16:58.222Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
